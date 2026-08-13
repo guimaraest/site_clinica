@@ -1,0 +1,94 @@
+.btn,
+.btn-primary {
+    background-color: var(--bg-light);
+    box-shadow: var(--shadow);
+
+    color: var(--text);
+    font-size: var(--text-18);
+    font-weight: 500;
+
+    border-radius: var(--radius-small);
+    min-width: 200px;
+    min-height: 56px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    transition: transform 0.2s ease-in-out;
+    will-change: transform;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+}
+
+.btn:hover,
+.btn:focus-visible,
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    transform: translateY(3px);
+    cursor: pointer;
+}
+
+.btn span,
+.btn-primary span {
+    display: block;
+}
+
+.card {
+    background-color: var(--bg);
+    box-shadow: var(--shadow);
+
+    color: var(--text);
+    font-size: var(--text-18);
+    font-weight: 500;
+
+    border-radius: var(--radius-big);
+    padding: var(--space-24);
+    width: 100%;
+    min-height: 680px;
+
+    display: inline-flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.card-hover {
+  transition: transform 0.2s ease-in-out,
+              background-color 0.2s ease-in-out;
+}
+
+.card-hover:hover,
+.card-hover:focus-visible {
+    transform: translateY(3px);
+    background-color: hsl(0, 0%, 6%);
+}
+
+@media (max-width: 768px) {
+  .btn,
+  .btn-primary {
+    min-width: 0;
+    width: 100%;
+    min-height: 48px;
+    font-size: var(--text-16);
+    border-radius: var(--radius-small);
+  }
+
+  .card {
+    min-height: auto;
+    padding: var(--space-16);
+    border-radius: var(--radius-big);
+    align-items: stretch;
+    gap: var(--space-12);
+  }
+
+  .card,
+  .card * {
+    max-width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
+  }
+}

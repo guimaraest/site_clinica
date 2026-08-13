@@ -1,0 +1,28 @@
+{
+  "name": "solaritus-site",
+  "version": "1.0.0",
+  "description": "© 2025 Thiago Guimarães. All rights reserved.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "set NODE_ENV=production&& eleventy",
+    "deploy": "set NODE_ENV=production&& eleventy && gh-pages -d _site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guimaraest/solaritus-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guimaraest/solaritus-site/issues"
+  },
+  "homepage": "https://github.com/guimaraest/solaritus-site#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}

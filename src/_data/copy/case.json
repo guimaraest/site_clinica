@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "case: confidential project",
+    "client": "Confidential Client",
+    "category": "E-commerce / Online Platform"
+  },
+
+  "overview": {
+    "description": "A empresa é uma marca de produtos de consumo voltada ao público final. No início do projeto, o negócio já havia validado sua proposta comercial por meio de canais offline, porém não possuía infraestrutura operacional ou digital adequada para escalar."
+  },
+
+  "challenge": {
+    "title": "o desafio",
+    "description": "O projeto exigia a estruturação rápida de um e-commerce funcional para sustentar o crescimento. Não existia:",
+    "items": [
+      "Gestão de estoque",
+      "Fluxo de envios e logística",
+      "Identificação de produtos",
+      "Integração com sistemas internos",
+      "Loja configurada de forma adequada"
+    ],
+    "extra": "Além disso, após a contratação de um fornecedor anterior, o resultado entregue foi um site lento, com baixo apelo visual e pouca credibilidade, mesmo após semanas de trabalho e investimento considerável."
+  },
+
+  "solution": {
+    "title": "a solução",
+    "phases": [
+      {
+        "title": "Estruturação da operação",
+        "items": [
+          "Organização do catálogo de produtos",
+          "Configuração de estoque e fluxos de envio",
+          "Implementação de identificadores internos",
+          "Integração completa entre sistemas e plataforma"
+        ]
+      },
+      {
+        "title": "Redesign focado em conversão",
+        "description": "O redesenho da loja foi conduzido com foco total em conversão. O principal ponto de intervenção foi a página de produto, reconstruída do zero com código customizado."
+      }
+    ]
+  },
+
+  "improvements": {
+    "title": "principais melhorias",
+    "items": [
+      "Nova hierarquia de conteúdo com layout mais visual",
+      "Interface simplificada para reduzir fricção no processo de compra",
+      "Sistema de avaliações para reforço de confiança",
+      "Seções ricas em conteúdo no final da página, otimizadas para SEO sem comprometer a experiência"
+    ],
+    "additional": "Também refinamos o design da página inicial e de outras seções com ajustes pontuais de tipografia e estilo via CSS, elevando o nível visual do site sem alterações estruturais desnecessárias."
+  },
+
+  "conversion": {
+    "title": "otimizações de conversão",
+    "items": [
+      "Indicador de progresso para benefícios de frete",
+      "Compra rápida diretamente pelo carrinho",
+      "Mensagens promocionais distribuídas pelo site",
+      "Ajustes no carrinho e no fluxo de checkout"
+    ]
+  },
+
+  "results": {
+    "title": "resultados",
+    "description": "A nova versão do site apresentou resultados imediatos. No primeiro ciclo de tráfego pago, o projeto alcançou faturamento relevante, superando expectativas iniciais e validando a nova estrutura de conversão e operação."
+  }
+}
+

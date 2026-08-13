@@ -1,0 +1,26 @@
+{
+  "brand": {
+    "name": "solaritus"
+  },
+  "contact": {
+    "email": "hello@placeholder.com"
+  },
+  "social": [
+    {
+      "name": "X",
+      "url": "https://x.com/placeholder"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/company/placeholder"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/placeholder"
+    }
+  ],
+  "copyright": {
+    "holder": "solaritus",
+    "year": 2025
+  }
+}

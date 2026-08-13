@@ -1,0 +1,49 @@
+{
+  "design": {
+    "title": "design",
+    "description": "Transforme sua loja em uma experiência visual única. Criamos layouts modernos, responsivos e alinhados à identidade da sua marca. Foco total em usabilidade, conversão e diferenciação no mercado.",
+    "items": [
+      "Design de homepage, páginas de produto e carrinho",
+      "Prototipação no Figma para validação rápida",
+      "Customização visual para destacar sua marca",
+      "Otimização para dispositivos móveis"
+    ]
+  },
+
+  "development": {
+    "title": "desenvolvimento",
+    "description": "Especialistas em Shopify frontend, entregamos soluções robustas, rápidas e seguras. Do ajuste simples ao desenvolvimento de funcionalidades avançadas, cuidamos de toda a parte técnica para você vender mais.",
+    "items": [
+      "Implementação de temas customizados",
+      "Integração de apps e automações",
+      "Otimização de performance",
+      "Ajustes de layout, UX e acessibilidade",
+      "Suporte técnico contínuo"
+    ]
+  },
+
+  "operations": {
+    "title": "operacional",
+    "description": "Cuidamos da integração da sua loja com sistemas essenciais para o seu negócio funcionar sem dor de cabeça. Automatize processos, ganhe tempo e tenha mais controle.",
+    "items": [
+      "Integração com Bling ERP para gestão de estoque e vendas",
+      "Configuração do Yampi Checkout para pagamentos otimizados",
+      "Suporte em integrações e automações",
+      "Treinamento para sua equipe"
+    ]
+  },
+
+  "tools": {
+    "title": "nossas ferramentas",
+    "description": "Utilizamos as melhores ferramentas do mercado para garantir qualidade, agilidade e resultados:",
+    "items": [
+      "Figma (design e prototipação)",
+      "Shopify (plataforma principal)",
+      "Bling ERP (gestão)",
+      "Yampi Checkout (pagamentos)",
+      "Git & GitHub (controle de versão)",
+      "Cypress (testes automatizados)",
+      "ClickUp (gestão de projetos)"
+    ]
+  }
+}

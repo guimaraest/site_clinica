@@ -1,0 +1,26 @@
+{
+  "nav":
+  [
+    {
+      "title": "home",
+      "url": "/"
+    },
+    {
+      "title": "serviço",
+      "url": "/service/"
+    },
+    {
+      "title": "case",
+      "url": "/case/"
+    },
+    {
+      "title": "preço",
+      "url": "/pricing/"
+    }
+  ],
+  "button": 
+  {
+    "title": "entre em contato",
+    "url": "example.com"
+  }
+}

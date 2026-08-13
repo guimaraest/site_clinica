@@ -1,0 +1,118 @@
+---
+pagename: case
+layout: layouts/base.liquid
+title: Case Shopify | Como Aumentamos as Vendas da Vistorr Brasil
+stylesheet: /css/page/case.css
+---
+
+{% assign page = copy.case %}
+
+<section class="section" id="page-title">
+  <div class="section-container">
+    <div class="section-content mobile-stack">
+      <div class="column">
+        <h1>{{ page.meta.title }}</h1>
+        <p class="paragraph">Cliente: {{ page.meta.client }} — Categoria: {{ page.meta.category }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="overview">
+  <div class="section-container">
+    <div class="section-content mobile-stack">
+      <div class="column">
+        <h2>Visão geral</h2>
+        <p>{{ page.overview.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="challenge">
+  <div class="section-container">
+    <div class="section-content mobile-stack">
+      <div class="column">
+        <h2>{{ page.challenge.title }}</h2>
+        <p>{{ page.challenge.description }}</p>
+        {% if page.challenge.items %}
+        <ul>
+          {% for item in page.challenge.items %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% if page.challenge.extra %}<p>{{ page.challenge.extra }}</p>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="solution">
+  <div class="section-container">
+    <div class="section-content mobile-stack">
+      <div class="column">
+        <h2>{{ page.solution.title }}</h2>
+        {% for phase in page.solution.phases %}
+          <div class="phase">
+            {% if phase.title %}<h3>{{ phase.title }}</h3>{% endif %}
+            {% if phase.items %}
+              <ul>
+                {% for it in phase.items %}
+                  <li>{{ it }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+            {% if phase.description %}<p>{{ phase.description }}</p>{% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="improvements">
+  <div class="section-container">
+    <div class="section-content mobile-stack">
+      <div class="column">
+        <h2>{{ page.improvements.title }}</h2>
+        {% if page.improvements.items %}
+        <ul>
+          {% for item in page.improvements.items %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% if page.improvements.additional %}<p>{{ page.improvements.additional }}</p>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="conversion">
+  <div class="section-container">
+    <div class="section-content mobile-stack">
+      <div class="column">
+        <h2>{{ page.conversion.title }}</h2>
+        {% if page.conversion.items %}
+        <ul>
+          {% for item in page.conversion.items %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="results">
+  <div class="section-container">
+    <div class="section-content mobile-stack">
+      <div class="column">
+        <h2>{{ page.results.title }}</h2>
+        <p>{{ page.results.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

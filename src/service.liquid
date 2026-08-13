@@ -1,0 +1,91 @@
+---
+pagename: services
+layout: layouts/base.liquid
+title: Designer e Desenvolvedor Shopify | Criação de Lojas Profissionais
+stylesheet: /css/page/service.css
+---
+
+{% assign page = copy.service %}
+<section class="section" id="services-design">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="column service-column">
+				<h2>{{ page.design.title }}</h2>
+				<p>{{ page.design.description }}</p>
+				<ul>
+					{% for item in page.design.items %}
+						<li>{{ item }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="column service-column">
+				{% include "snippets/design-mock.liquid" %}
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section" id="services-development">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="column service-column">
+				<h2>{{ page.development.title }}</h2>
+				<p>{{ page.development.description }}</p>
+				<ul>
+					{% for item in page.development.items %}
+						<li>{{ item }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="column service-column">
+				{% include "snippets/dev-mock.liquid" %}
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section" id="services-operations">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="column service-column">
+				<h2>{{ page.operations.title }}</h2>
+				<p>{{ page.operations.description }}</p>
+				<ul>
+					{% for item in page.operations.items %}
+						<li>{{ item }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="column service-column">{% include "snippets/ops-mock.liquid" %}</div>
+		</div>
+	</div>
+</section>
+
+<section class="section service-tools" id="services-tools">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="tools-column">
+				<div class="tools-info">
+					<h2>{{ page.tools.title }}</h2>
+					<p>{{ page.tools.description }}</p>
+				</div>
+				<div class="services-marquee" aria-hidden="false" role="group" aria-label="Ferramentas e plataformas">
+					<div class="marquee-track">
+						{% for i in (1..3) %}
+							<div class="logo-card"><div class="logo-wrap">{% include 'icons/clickup.liquid' %}</div></div>
+							<div class="logo-card"><div class="logo-wrap">{% include 'icons/figma.liquid' %}</div></div>
+							<div class="logo-card"><div class="logo-wrap">{% include 'icons/shopify.liquid' %}</div></div>
+							<div class="logo-card"><div class="logo-wrap">{% include 'icons/bling.liquid' %}</div></div>
+							<div class="logo-card"><div class="logo-wrap">{% include 'icons/yampi.liquid' %}</div></div>
+							<div class="logo-card"><div class="logo-wrap">{% include 'icons/github.liquid' %}</div></div>
+							<div class="logo-card"><div class="logo-wrap">{% include 'images/git-icon.liquid' %}</div></div>
+							<div class="logo-card"><div class="logo-wrap">{% include 'images/vscode-icon.liquid' %}</div></div>
+							<div class="logo-card"><div class="logo-wrap">{% include 'images/python-icon.liquid' %}</div></div>
+						{% endfor %}
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>

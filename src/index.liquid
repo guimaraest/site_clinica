@@ -1,0 +1,111 @@
+---
+pagename: home
+layout: layouts/base.liquid
+title: Desenvolvedor Shopify Especialista em E-commerce | Solaritus
+stylesheet: /css/page/home.css
+---
+
+{% assign page = copy.home %}
+
+<section class="section hero-section hero-gradient" id="hero">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="column">
+				<div class="hero-text">
+					<h1>{{ page.hero.title }}</h1>
+					<p class="subheading">{{ page.hero.subtitle }}</p>
+				</div>
+				<div class="hero-buttons">
+					<a href="{{ page.cta.primary_url }}" target="_blank" rel="noopener noreferrer" class="btn-primary">{{ page.cta.primary }}</a>
+					<a href="{{ page.cta.secondary_url | url }}" class="btn">{{ page.cta.secondary }}</a>
+				</div>
+			</div>
+			<div class="column">
+				<div class="hero-image">
+					{% include "images/purple-shopping-bag.liquid" %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section problem-section" id="problem">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="column">
+				<div class="hero-image">
+					{% include "images/purple-laptop-illustration.liquid" %}
+				</div>
+			</div>
+			<div class="column">
+				<h2>{{ page.problem.title }}</h2>
+				<p>{{ page.problem.subtitle }}</p>
+				<ul>
+					{% for item in page.problem.items %}
+						<li>{{ item }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section solution-section" id="solution">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="column">
+				<h2>{{ page.solution.title }}</h2>
+				<p>{{ page.solution.subtitle }}</p>
+				<div>
+					{% for line in page.solution.description %}
+						<p>{{ line }}</p>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="column">
+				<div class="hero-image">
+					{% include "images/purple-mac-pc-illustration.liquid" %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section focus-section" id="focus">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="column">
+				<h2>{{ page.focus.title }}</h2>
+				<ul>
+					{% for item in page.focus.items %}
+						<li>{{ item }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section integration-section" id="integration">
+  <div class="section-container">
+    <div class="section-content">
+      <div class="column integration-column">
+        <h2 class="center">{{ page.integration.title }}</h2>
+        <div class="integration-list">
+          {% for entry in page.integration.items %}
+            <div class="center card card-hover integration-item">
+
+			  <div class="center integration-icon"><i class="iconoir-{{ entry.key }}"></i></div>
+
+              <span class="center">{{ entry.label }}</span>
+              {% if entry.description %}
+                <p class="topleft">{{ entry.description }}</p>
+              {% endif %}
+			  
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

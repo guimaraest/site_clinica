@@ -1,0 +1,28 @@
+<header class="header" id="header">
+  <div class="header-container">
+    <div class="nav-wrapper">
+      <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <div id="menuOpen" class="menu-open">
+          {% include "icons/hamburger-open.liquid" %}
+        </div>
+        <div id="menuClose" class="menu-close">
+          {% include "icons/hamburger-close.liquid" %}
+        </div>
+      </button>
+      <nav id="headerNav" class="nav" aria-hidden="true">
+        <ul>
+          {% for item in nav.nav %}
+            <li><a href="{{ item.url | url }}" class="link">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+    <div>
+      <a href="{{ nav.button.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-nav">
+        <span>{{ nav.button.title }}</span>
+      </a>
+    </div>
+  </div>
+  <hamburger-menu></hamburger-menu>
+</header>
+

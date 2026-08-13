@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    {% if title %}{{ title }} · {{ site.name }}{% else %}{{ site.name }}{% endif %}
+  </title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+
+  <script src="{{ '/assets/main.js' | url }}"></script>
+  <link rel="stylesheet" href="{{ '/assets/css/base.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/components.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/header.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/footer.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets' | url }}{{ stylesheet }}">
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="page-{{ pagename }}">
+
+  {% include "header.liquid" %}
+
+  <main>
+    <div class="main-container">
+      {{ content }}
+    </div>
+  </main>
+
+  {% include "footer.liquid" %}
+
+</body>
+</html>

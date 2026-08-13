@@ -1,0 +1,49 @@
+---
+pagename: pricing
+layout: layouts/base.liquid
+title: Preços de Serviços Shopify | Planos e Valores 
+stylesheet: /css/page/pricing.css
+---
+
+{% assign page = copy.pricing %}
+
+<section class="section pricing-cards hero-gradient" id="page">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="column">
+				<div class="row">
+					<h1>{{ page.title }}</h1>
+				</div>
+	
+				<div class="row">
+					{% for plan in page.plans %}
+					<div class="column">
+						<div class="card" id="plan-{{ plan.key }}">
+							<div class="card-content">
+								<div class="card-title">
+									<h2 class="heading-weak">{{ plan.name }}</h2>
+									<p class="price heading-strong">
+										<span class="price-value">{{ plan.price }}</span><span class="price-time">{{ plan.price_time }}</span>
+									</p>
+								</div>
+								<p>{{ plan.description }}</p>
+								<hr class="divider">
+								<ul>
+									{% for feat in plan.features %}
+										<li>{{ feat }}</li>
+									{% endfor %}
+								</ul>
+							</div>
+							<div class="card-cta">
+								<a href="{{ plan.cta.url }}" target="_blank" rel="noopener noreferrer" class="btn{% if plan.cta.color == "primary" %}-primary{% endif %} btn-pricing">
+									<span>{{ plan.cta.content }}</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
