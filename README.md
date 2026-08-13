@@ -1,4 +1,4 @@
-# solaritus-site
+# site_clinica
 
 Clinic website for a client
 
