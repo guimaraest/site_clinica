@@ -1,111 +1,108 @@
 ---
 pagename: home
 layout: layouts/base.liquid
-title: Desenvolvedor Shopify Especialista em E-commerce | Solaritus
+title: Clínica Odontológica | Cuidado completo para seu sorriso
 stylesheet: /css/page/home.css
 ---
-
-{% assign page = copy.home %}
 
 <section class="section hero-section hero-gradient" id="hero">
 	<div class="section-container">
 		<div class="section-content">
 			<div class="column">
 				<div class="hero-text">
-					<h1>{{ page.hero.title }}</h1>
-					<p class="subheading">{{ page.hero.subtitle }}</p>
+					<h1>Seu sorriso merece o melhor cuidado</h1>
+					<p class="subheading">Atendimento odontológico completo, com tecnologia moderna e uma equipe pronta para cuidar de você em cada etapa do tratamento.</p>
 				</div>
 				<div class="hero-buttons">
-					<a href="{{ page.cta.primary_url }}" target="_blank" rel="noopener noreferrer" class="btn-primary">{{ page.cta.primary }}</a>
-					<a href="{{ page.cta.secondary_url | url }}" class="btn">{{ page.cta.secondary }}</a>
+					<a href="#agendar" target="_blank" rel="noopener noreferrer" class="btn-primary">Agendar Online</a>
+					<a href="https://wa.me/SEUNUMERO" class="btn">WhatsApp</a>
 				</div>
 			</div>
 			<div class="column">
 				<div class="hero-image">
-					{% include "images/purple-shopping-bag.liquid" %}
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="section problem-section" id="problem">
+<section class="section problem-section" id="servicos">
 	<div class="section-container">
 		<div class="section-content">
 			<div class="column">
 				<div class="hero-image">
-					{% include "images/purple-laptop-illustration.liquid" %}
 				</div>
 			</div>
 			<div class="column">
-				<h2>{{ page.problem.title }}</h2>
-				<p>{{ page.problem.subtitle }}</p>
+				<h2>Nossos tratamentos</h2>
+				<p>Soluções completas para cada necessidade do seu sorriso.</p>
 				<ul>
-					{% for item in page.problem.items %}
-						<li>{{ item }}</li>
-					{% endfor %}
+					<li>Limpeza e Prevenção</li>
+					<li>Estética Dental</li>
+					<li>Ortodontia</li>
+					<li>Implantes</li>
+					<li>Endodontia</li>
+					<li>Odontopediatria</li>
 				</ul>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="section solution-section" id="solution">
-	<div class="section-container">
-		<div class="section-content">
-			<div class="column">
-				<h2>{{ page.solution.title }}</h2>
-				<p>{{ page.solution.subtitle }}</p>
-				<div>
-					{% for line in page.solution.description %}
-						<p>{{ line }}</p>
-					{% endfor %}
-				</div>
-			</div>
-			<div class="column">
-				<div class="hero-image">
-					{% include "images/purple-mac-pc-illustration.liquid" %}
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="section focus-section" id="focus">
-	<div class="section-container">
-		<div class="section-content">
-			<div class="column">
-				<h2>{{ page.focus.title }}</h2>
-				<ul>
-					{% for item in page.focus.items %}
-						<li>{{ item }}</li>
-					{% endfor %}
-				</ul>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="section integration-section" id="integration">
+<section class="section integration-section" id="equipe">
   <div class="section-container">
     <div class="section-content">
       <div class="column integration-column">
-        <h2 class="center">{{ page.integration.title }}</h2>
+        <h2 class="center">Quem cuida do seu sorriso</h2>
         <div class="integration-list">
-          {% for entry in page.integration.items %}
-            <div class="center card card-hover integration-item">
-
-			  <div class="center integration-icon"><i class="iconoir-{{ entry.key }}"></i></div>
-
-              <span class="center">{{ entry.label }}</span>
-              {% if entry.description %}
-                <p class="topleft">{{ entry.description }}</p>
-              {% endif %}
-			  
-            </div>
-          {% endfor %}
+          <div class="center card card-hover integration-item">
+            <div class="center integration-icon"><i class="iconoir-user"></i></div>
+            <span class="center">Dra. Fulana de Tal</span>
+            <p class="topleft">Ortodontia — CRO 00000</p>
+          </div>
+          <div class="center card card-hover integration-item">
+            <div class="center integration-icon"><i class="iconoir-user"></i></div>
+            <span class="center">Dr. Fulano de Tal</span>
+            <p class="topleft">Implantodontia — CRO 00000</p>
+          </div>
+          <div class="center card card-hover integration-item">
+            <div class="center integration-icon"><i class="iconoir-user"></i></div>
+            <span class="center">Dra. Fulana de Tal</span>
+            <p class="topleft">Odontopediatria — CRO 00000</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</section>
+
+<section class="section focus-section" id="localizacao">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="column">
+				<h2>Onde estamos</h2>
+				<p>Rua Exemplo, 123 — Bairro, Belo Horizonte/MG</p>
+				<p>Seg a Sex: 8h às 18h | Sáb: 8h às 12h</p>
+				<div class="map-embed">
+					<iframe src="https://www.google.com/maps/embed?pb=SEU_EMBED" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+				<a href="https://maps.google.com/?q=SEU_ENDERECO" target="_blank" rel="noopener noreferrer" class="btn">Como chegar</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section hero-section" id="agendar">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="column">
+				<h2>Agende sua consulta</h2>
+				<div class="hero-buttons">
+					<a href="#" target="_blank" rel="noopener noreferrer" class="btn-primary">Agendar Online</a>
+					<a href="https://wa.me/SEUNUMERO" class="btn">WhatsApp</a>
+				</div>
+				<a href="https://wa.me/SEUNUMERO?text=Quero%20tirar%20uma%20d%C3%BAvida" class="btn-link">Tirar dúvidas antes de agendar</a>
+			</div>
+		</div>
+	</div>
 </section>
