@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "set NODE_ENV=development&& eleventy --serve",
     "build": "set NODE_ENV=production&& eleventy",
     "deploy": "set NODE_ENV=production&& eleventy && gh-pages -d _site"
   },
