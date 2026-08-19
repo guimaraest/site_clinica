@@ -1,13 +1,13 @@
 :root {
     /* color */
-    --bg-light: hsl(0, 0%, 10%);
-    --bg: hsl(0, 0%, 5%);
-    --bg-dark: hsl(0, 0%, 0%);
+    --bg-light: hsl(0, 0%, 100%);
+    --bg: hsl(0, 0%, 99%);
+    --bg-dark: hsl(0, 0%, 95%);
 
-    --text: hsl(0, 0%, 95%);
-    --text-muted: hsl(0, 0%, 70%);
+    --text: hsl(0, 0%, 5%);
+    --text-muted: hsl(0, 0%, 30%);
 
-    --primary: #5d65cc;
+    --primary: #2C88D8;
 
 
     /* shadow */
@@ -130,7 +130,7 @@ a {
 
 ::selection {
   background: var(--primary);
-  color: #fff;
+  color: var(--text);
 }
 
 h1, h2, h3, h4, h5, h6, p, small {
