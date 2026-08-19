@@ -6,16 +6,66 @@
       "url": "/"
     },
     {
-      "title": "serviço",
-      "url": "/service/"
+      "title": "serviços",
+      "url": "/servicos/",
+      "children":
+      [
+        {
+          "title": "restauração (cárie)",
+          "url": "/servicos/restauracao/"
+        },
+        {
+          "title": "urgência (dor de dente)",
+          "url": "/servicos/urgencia/"
+        },
+        {
+          "title": "atendimento infantil",
+          "url": "/servicos/atendimento-infantil/"
+        },
+        {
+          "title": "extração (implante)",
+          "url": "/servicos/extracao/"
+        },
+        {
+          "title": "aparelho",
+          "url": "/servicos/aparelho/"
+        },
+        {
+          "title": "prótese",
+          "url": "/servicos/protese/"
+        },
+        {
+          "title": "clareamento (estética)",
+          "url": "/servicos/clareamento/"
+        },
+        {
+          "title": "outros",
+          "url": "/servicos/outros/"
+        }
+      ]
     },
     {
-      "title": "case",
-      "url": "/case/"
+      "title": "localização",
+      "url": "/localizacao/"
     },
     {
-      "title": "preço",
-      "url": "/pricing/"
+      "title": "nossa equipe",
+      "url": "/equipe/",
+      "children":
+      [
+        {
+          "title": "Dra. Cristiana Maria",
+          "url": "/servicos/dra-cristiana/"
+        },
+        {
+          "title": "Dr. Vinicius",
+          "url": "/servicos/dr-vinicius/"
+        },
+        {
+          "title": "Dr. Cássio",
+          "url": "/servicos/dr-cassio/"
+        }
+      ]
     }
   ],
   "button": 

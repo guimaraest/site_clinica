@@ -1,26 +1,26 @@
 {
   "brand": {
-    "name": "solaritus"
+    "name": "lavie"
   },
   "contact": {
-    "email": "hello@placeholder.com"
+    "email": "hello@lavie.com"
   },
   "social": [
     {
       "name": "X",
-      "url": "https://x.com/placeholder"
+      "url": "https://x.com/lavie"
     },
     {
       "name": "LinkedIn",
-      "url": "https://linkedin.com/company/placeholder"
+      "url": "https://linkedin.com/company/lavie"
     },
     {
       "name": "GitHub",
-      "url": "https://github.com/placeholder"
+      "url": "https://github.com/lavie"
     }
   ],
   "copyright": {
-    "holder": "solaritus",
+    "holder": "lavie",
     "year": 2025
   }
 }
