@@ -11,23 +11,15 @@
       "children":
       [
         {
-          "title": "restauração (cárie)",
+          "title": "dor de dente e carie (restauração)",
           "url": "/servicos/restauracao/"
         },
         {
-          "title": "urgência (dor de dente)",
-          "url": "/servicos/urgencia/"
-        },
-        {
-          "title": "atendimento infantil",
-          "url": "/servicos/atendimento-infantil/"
-        },
-        {
           "title": "extração (implante)",
-          "url": "/servicos/extracao/"
+          "url": "/servicos/implante/"
         },
         {
-          "title": "aparelho",
+          "title": "aparelho (ortodontia)",
           "url": "/servicos/aparelho/"
         },
         {
@@ -35,8 +27,12 @@
           "url": "/servicos/protese/"
         },
         {
-          "title": "clareamento (estética)",
+          "title": "clareamento",
           "url": "/servicos/clareamento/"
+        },
+        {
+          "title": "estetica (harmonização)",
+          "url": "/servicos/estetica/"
         },
         {
           "title": "outros",

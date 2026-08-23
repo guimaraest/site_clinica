@@ -16,7 +16,7 @@
               <li class="nav-item has-dropdown">
                 <button id="dropdownToggle" href="{{ item.url | url }}" class="dropdown-button button-clear">
                   {{ item.title }}
-                  {% include "icons/arrow-down.liquid", class: "dropdown-icon" %}
+                  {% include "icons/arrow-down.liquid", class: dropdown-icon" %}
                 </button>
                 <ul class="dropdown-ul">
                   {% for child in item.children %}
