@@ -53,8 +53,8 @@
 
 
     /* radius */
-    --radius-big: 16px;
-    --radius-small: 8px;
+    --radius-big: 0px;
+    --radius-small: 0px;
 }
 
 @media (max-width: 768px) {
@@ -63,8 +63,8 @@
     --section-padding-vertical: 24px;
     --header-height: calc(52px + env(safe-area-inset-top));
 
-    --radius-big: 12px;
-    --radius-small: 6px;
+    --radius-big: 0px;
+    --radius-small: 0px;
   }
 }
 
