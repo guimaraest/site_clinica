@@ -1,4 +1,4 @@
-.page-servico .service-card {
+.service-card {
   position: relative;
   min-height: 280px;
   overflow: hidden;
@@ -6,7 +6,7 @@
   color: var(--bg-light);
 }
 
-.page-servico .service-card img {
+.service-card img {
   position: absolute;
   inset: 0;
   z-index: -2;
@@ -15,7 +15,7 @@
   object-fit: cover;
 }
 
-.page-servico .service-card::before {
+.service-card::before {
   position: absolute;
   inset: 0;
   z-index: -1;
@@ -27,13 +27,13 @@
   content: "";
 }
 
-.page-servico .service-card > * {
+.service-card > * {
   position: relative;
   z-index: 1;
 }
 
 @media (max-width: 768px) {
-  .page-servico .service-card {
+.service-card {
     min-height: 220px;
   }
 }

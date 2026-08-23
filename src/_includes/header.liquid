@@ -1,24 +1,24 @@
-<header class="header" id="header">
+<header class="header" id="siteHeader">
   <div class="header-container">
     <div class="nav-wrapper">
-      <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
-        <div id="menuOpen" class="menu-open">
+      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="headerNav" aria-label="Abrir menu">
+        <span class="menu-open" aria-hidden="true">
           {% include "icons/hamburger-open.liquid" %}
-        </div>
-        <div id="menuClose" class="menu-close">
+        </span>
+        <span class="menu-close" aria-hidden="true">
           {% include "icons/hamburger-close.liquid" %}
-        </div>
+        </span>
       </button>
-      <nav id="headerNav" class="nav" aria-hidden="true">
+      <nav id="headerNav" class="nav" aria-hidden="false">
         <ul class="nav-links">
-          {% for item in nav.nav %}
+          {% for item in nav.nav %}{% assign item_id = item.title | slugify %}
             {% if item.children %}
               <li class="nav-item has-dropdown">
-                <button id="dropdownToggle" href="{{ item.url | url }}" class="dropdown-button button-clear">
+                <button type="button" class="dropdown-button button-clear" aria-expanded="false" aria-controls="dropdown-{{ item_id }}">
                   {{ item.title }}
-                  {% include "icons/arrow-down.liquid", class: dropdown-icon" %}
+                  {% include "icons/arrow-down.liquid", class: "dropdown-icon" %}
                 </button>
-                <ul class="dropdown-ul">
+                <ul class="dropdown-menu" id="dropdown-{{ item_id }}">
                   {% for child in item.children %}
                     <li><a href="{{ child.url | url }}" class="link">{{ child.title }}</a></li>
                   {% endfor %}
