@@ -1,0 +1,26 @@
+{
+  "brand": {
+    "name": "concept belvedere"
+  },
+  "contact": {
+    "email": "hello@lavie.com"
+  },
+  "social": [
+    {
+      "name": "X",
+      "url": "https://x.com/lavie"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/company/lavie"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/lavie"
+    }
+  ],
+  "copyright": {
+    "holder": "concept belvedere",
+    "year": 2026
+  }
+}

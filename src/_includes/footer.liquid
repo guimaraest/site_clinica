@@ -1,0 +1,38 @@
+<footer class="footer">
+  <div class="section-container footer-container">
+    <div class="footer-content">
+      <div class="footer-row footer-name">
+        <p>
+          {{ footer.brand.name }}
+        </p>
+      </div>
+    
+      <div class="footer-column">
+        <div class="footer-row">
+          <nav class="footer-social">
+            {% for item in footer.social %}
+              <a href="{{ item.url }}" rel="noopener" target="_blank" class="link">
+                {{ item.name }}
+              </a>
+            {% endfor %}
+          </nav>
+        </div>
+      
+        <div class="footer-row">
+          <div class="footer-contact">
+            <a href="mailto:{{ footer.contact.email }}" class="link">
+              {{ footer.contact.email }}
+            </a>
+          </div>
+        
+          <div class="footer-meta">
+            <small>
+              © {{ footer.copyright.year }} {{ footer.copyright.holder }}
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+

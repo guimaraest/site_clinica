@@ -1,0 +1,64 @@
+.hero-buttons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: var(--space-20);
+}
+
+.hero-section .section-content:not(:has(.page-image)) {
+  align-items: center;
+}
+
+.section-content:has(.page-image) {
+  align-items: stretch;
+}
+
+.column:has(> .page-image) {
+  justify-content: flex-start;
+  align-self: stretch;
+}
+
+.page-image {
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 240px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  box-shadow: var(--shadow);
+}
+
+.info-card {
+  min-height: auto;
+  gap: var(--space-12);
+}
+
+#agendar .section-content {
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-12);
+  }
+
+  .section-content:has(.page-image) > .column:has(> .page-image) {
+    order: -1;
+  }
+
+  .page-image {
+    flex: none;
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+#tratamentos .info-card {
+  border-left: 4px solid var(--primary);
+}
+
+#individualidade .info-card {
+  border-left: 4px solid var(--primary);
+}

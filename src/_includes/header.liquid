@@ -1,0 +1,46 @@
+<header class="header" id="siteHeader">
+  <div class="header-container">
+    <div class="nav-wrapper">
+      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="headerNav" aria-label="Abrir menu">
+        <span class="menu-open" aria-hidden="true">
+          {% include "icons/hamburger-open.liquid" %}
+        </span>
+        <span class="menu-close" aria-hidden="true">
+          {% include "icons/hamburger-close.liquid" %}
+        </span>
+      </button>
+      <nav id="headerNav" class="nav" aria-hidden="false">
+        <ul class="nav-links">
+          {% for item in nav.nav %}
+            {% if item.children %}
+              <li class="nav-item dropdown-parent">
+                <dropdown-menu>
+                  <button type="button" class="dropdown-button button-clear" aria-expanded="false">
+                    {{ item.title }}
+                    {% include "icons/arrow-down.liquid", class: "dropdown-icon" %}
+                  </button>
+                  <ul class="card dropdown-list">
+                    {% for child in item.children %}
+                      <li><a href="{{ child.url | url }}" class="link">{{ child.title }}</a></li>
+                    {% endfor %}
+                  </ul>
+                </dropdown-menu>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a href="{{ item.url | url }}" class="link">{{ item.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+    <div>
+      <a href="{{ nav.button.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-nav">
+        <span>{{ nav.button.title }}</span>
+      </a>
+    </div>
+  </div>
+  <hamburger-menu></hamburger-menu>
+</header>
+
