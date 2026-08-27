@@ -8,6 +8,7 @@
     --text-muted: hsl(0, 0%, 30%);
 
     --primary: #2C88D8;
+    --primary-muted: #206DB1;
 
 
     /* shadow */
@@ -198,7 +199,7 @@ h1, h2, h3, h4, h5, h6, p, small {
 .column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   flex-grow: 1;
   gap: var(--space-20);
 }
