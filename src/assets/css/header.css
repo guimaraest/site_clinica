@@ -57,37 +57,30 @@
   min-width: 0;
 }
 
-.dropdown-menu {
+.dropdown-list {
   position: absolute;
-  top: calc(100% + var(--space-8));
-  left: calc(var(--space-12) * -1);
-  z-index: 1;
-  min-width: 240px;
-  margin: 0;
-  padding: var(--space-8) 0;
+  top: calc(100% + var(--space-4));
+  z-index: 2;
+  min-width: 200px;
   list-style: none;
-  background: var(--bg-light);
-  box-shadow: var(--shadow-small);
   visibility: hidden;
   opacity: 0;
-  transform: translateY(-4px);
   transition: opacity 150ms ease, transform 150ms ease, visibility 150ms ease;
 }
 
-.has-dropdown.is-open .dropdown-menu {
+.dropdown-parent.is-open .dropdown-list {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
 }
 
-.dropdown-menu .link {
+.dropdown-list .link {
   display: block;
-  padding: var(--space-8) var(--space-12);
   white-space: nowrap;
 }
 
-.dropdown-menu .link:hover,
-.dropdown-menu .link:focus-visible {
+.dropdown-list .link:hover,
+.dropdown-list .link:focus-visible {
   background: var(--bg-dark);
 }
 
@@ -97,7 +90,7 @@
   transition: transform 150ms ease;
 }
 
-.has-dropdown.is-open .dropdown-icon {
+.dropdown-parent.is-open .dropdown-icon {
   transform: rotate(180deg);
 }
 
@@ -106,12 +99,12 @@
   height: 100%;
 }
 
-.dropdown-menu,
+.dropdown-list,
 .menu-button {
   -webkit-tap-highlight-color: transparent;
 }
 
-.dropdown-menu[hidden] {
+.dropdown-list[hidden] {
   display: none;
 }
 
@@ -223,7 +216,7 @@ hamburger-menu {
     display: flex;
   }
 
-  .dropdown-menu {
+  .dropdown-list {
     position: static;
     min-width: 0;
     padding: 0 0 0 var(--space-12);
@@ -235,7 +228,7 @@ hamburger-menu {
     transition: max-height 200ms ease, opacity 150ms ease, visibility 200ms ease;
   }
 
-  .has-dropdown.is-open .dropdown-menu {
+  .dropdown-parent.is-open .dropdown-list {
     max-height: 500px;
     margin-top: var(--space-8);
     visibility: visible;
@@ -245,7 +238,7 @@ hamburger-menu {
 
 @media (prefers-reduced-motion: reduce) {
   .nav,
-  .dropdown-menu,
+  .dropdown-list,
   .dropdown-icon {
     transition: none;
   }

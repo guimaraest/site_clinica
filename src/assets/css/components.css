@@ -41,7 +41,6 @@
     background-color: var(--bg);
     box-shadow: var(--shadow);
 
-    color: var(--text);
     font-size: var(--text-18);
     font-weight: 500;
 
@@ -64,7 +63,7 @@
 .card-hover:hover,
 .card-hover:focus-visible {
     transform: translateY(3px);
-    background-color: hsl(0, 0%, 6%);
+    cursor: pointer;
 }
 
 .card-grid {
