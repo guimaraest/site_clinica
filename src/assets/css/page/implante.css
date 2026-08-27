@@ -54,3 +54,7 @@
     aspect-ratio: 16 / 10;
   }
 }
+
+#como-funciona .info-card {
+  border-left: 4px solid var(--primary);
+}

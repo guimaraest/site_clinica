@@ -54,3 +54,11 @@
     aspect-ratio: 16 / 10;
   }
 }
+
+#tratamentos .info-card {
+  border-left: 4px solid var(--primary);
+}
+
+#individualidade .info-card {
+  border-left: 4px solid var(--primary);
+}

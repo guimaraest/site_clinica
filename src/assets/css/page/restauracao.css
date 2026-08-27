@@ -54,3 +54,11 @@
     aspect-ratio: 16 / 10;
   }
 }
+
+#medo-dentista .info-card {
+  border-left: 4px solid var(--primary);
+}
+
+#causas .info-card {
+  border-left: 4px solid var(--primary);
+}
