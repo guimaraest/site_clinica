@@ -163,13 +163,13 @@ h1, h2, h3, h4, h5, h6, p, small {
 
 .section {
     width: 100%;
-    height: 600px;
+    height: fit-content;
     padding: 0;
 }
 
 .section-container {
     width: 100%;
-    height: 100%;
+    height: fit-content;
     padding: var(--section-padding-vertical) var(--section-padding-horizontal);
 
     display: flex;
@@ -178,8 +178,9 @@ h1, h2, h3, h4, h5, h6, p, small {
 }
 
 .section-content {
+    gap: var(--space-24);
     width: 100%;
-    height: 100%;
+    height: fit-content;
     padding: 0;
     max-width: var(--section-max-width);
 
@@ -192,12 +193,6 @@ h1, h2, h3, h4, h5, h6, p, small {
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
-}
-
-.integration-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
 }
 
 .column {
@@ -216,7 +211,8 @@ h1, h2, h3, h4, h5, h6, p, small {
   gap: var(--space-20);
 }
 
-.row > .column {
+.row > .column,
+.section-content > .column {
   flex: 1 1 0;
   min-width: 0;
 }
