@@ -2,6 +2,9 @@
     height: 500px;
     background-color: var(--bg-dark);
     color: var(--text);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 
     position: sticky;
     width: 100%;
@@ -13,7 +16,7 @@
 }
 
 .footer-container {
-    padding: var(--space-48) var(--section-padding-horizontal) var(--space-12) var(--section-padding-horizontal);
+    padding: var(--space-48) var(--section-padding-horizontal) var(--space-24) var(--section-padding-horizontal);
 }
 
 .footer-content {
@@ -46,11 +49,11 @@
 }
 
 .footer-name p {
-    font-size: 128px;
+    font-size: 64px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
 
-    background: linear-gradient(to top, hsl(0, 0%, 30%) 0%, hsl(0, 0%, 40%) 5%, hsl(0, 0%, 50%) 10%, hsl(0, 0%, 100%) 80%);
+    background: linear-gradient(to top, hsl(0, 0%, 70%) 0%, hsl(0, 0%, 20%) 5%, hsl(0, 0%, 10%) 10%, hsl(0, 0%, 0%) 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

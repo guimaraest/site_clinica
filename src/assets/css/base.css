@@ -223,6 +223,7 @@ h1, h2, h3, h4, h5, h6, p, small {
   align-items: self-start;
 }
 
+.hero-buttons.center,
 .center {
   width: 100%;
   justify-content: center;
