@@ -10,6 +10,6 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
       data: "_data"
     },
-    pathPrefix: isProd ? "/solaritus-site/" : "/"
+    pathPrefix: isProd ? "/site-clinica/" : "/"
   };
 };
