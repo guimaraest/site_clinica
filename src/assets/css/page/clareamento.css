@@ -5,14 +5,26 @@
   gap: var(--space-20);
 }
 
-.hero-section .section-content {
+.hero-section .section-content:not(:has(.page-image)) {
   align-items: center;
 }
 
+.section-content:has(.page-image) {
+  align-items: stretch;
+}
+
+.column:has(> .page-image) {
+  justify-content: flex-start;
+  align-self: stretch;
+}
+
 .page-image {
+  flex: 1 1 auto;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  min-height: 240px;
+  height: 100%;
   object-fit: cover;
+  object-position: center top;
   box-shadow: var(--shadow);
 }
 
@@ -32,7 +44,13 @@
     gap: var(--space-12);
   }
 
+  .section-content:has(.page-image) > .column:has(> .page-image) {
+    order: -1;
+  }
+
   .page-image {
+    flex: none;
+    height: auto;
     aspect-ratio: 16 / 10;
   }
 }
