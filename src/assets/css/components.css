@@ -129,7 +129,7 @@
   z-index: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .btn,
   .btn-primary {
     min-width: 0;
