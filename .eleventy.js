@@ -1,7 +1,15 @@
+console.log(process.env.NODE_ENV);
 const isProd = process.env.NODE_ENV === "production";
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets"); // copy your static assets
+
+  eleventyConfig.addTransform("envComment", function (content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
+      return content + `\n<!-- env: ${process.env.NODE_ENV} -->`;
+    }
+    return content;
+  });
 
   return {
     dir: {
@@ -10,6 +18,6 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
       data: "_data"
     },
-    pathPrefix: isProd ? "/site-clinica/" : "/"
+    pathPrefix: isProd ? "/site_clinica/" : "/"
   };
 };
