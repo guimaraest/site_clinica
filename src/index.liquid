@@ -15,8 +15,7 @@ stylesheet: /css/page/home.css
 					<p class="subheading">Atendimento odontológico completo, com tecnologia moderna e uma equipe pronta para cuidar de você em cada etapa do tratamento.</p>
 				</div>
 				<div class="hero-buttons">
-					<a href="{{ '#agendar' | url }}" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="iconoir-calendar-plus" aria-hidden="true"></i>Agendar Online</a>
-					<a href="{{ 'https://wa.me/SEUNUMERO' | url }}" class="btn">WhatsApp</a>
+					<a href="{{ nav.button.url | url }}" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="iconoir-whatsapp" aria-hidden="true"></i>{{ nav.button.title }}</a>
 				</div>
 				<div class="hero-trust"><span><i class="iconoir-shield-check"></i> Atendimento acolhedor</span><span><i class="iconoir-spark"></i> Tecnologia e precisão</span></div>
 			</div>
@@ -98,10 +97,9 @@ stylesheet: /css/page/home.css
 			<div class="column">
 				<span class="kicker">Seu próximo passo</span><h2>Agende sua consulta</h2><p class="subheading">Conte o que você precisa. Nós ajudamos a encontrar o melhor caminho.</p>
 				<div class="hero-buttons">
-					<a href="{{ '#' | url }}" target="_blank" rel="noopener noreferrer" class="btn-primary">Agendar Online</a>
-					<a href="{{ 'https://wa.me/SEUNUMERO' | url }}" class="btn">WhatsApp</a>
+					<a href="{{ nav.button.url | url }}" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="iconoir-whatsapp" aria-hidden="true"></i>{{ nav.button.title }}</a>
 				</div>
-				<a href="{{ 'https://wa.me/SEUNUMERO?text=Quero%20tirar%20uma%20d%C3%BAvida' | url }}" class="btn-link">Tirar dúvidas antes de agendar</a>
+				<a href="{{ nav.button.url | url }}?text=Quero%20tirar%20uma%20d%C3%BAvida" class="btn-link">Tirar dúvidas antes de agendar</a>
 			</div>
 		</div>
 	</div>
