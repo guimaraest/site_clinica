@@ -2,6 +2,7 @@
 pagename: equipe
 layout: layouts/base.liquid
 title: Equipe | Clínica Odontológica
+stylesheet: /css/page/equipe.css
 ---
 
 <section class="section hero-section hero-gradient" id="hero">
@@ -22,22 +23,17 @@ title: Equipe | Clínica Odontológica
     <div class="section-content">
       <div class="column integration-column">
         <h2 class="center">Nossos profissionais</h2>
-        <div class="integration-list">
-          <div class="center card card-hover integration-item">
-            <div class="center integration-icon"><i class="iconoir-user"></i></div>
-            <span class="center">Dra. Fulana de Tal</span>
-            <p class="topleft">Ortodontia — CRO 00000</p>
-          </div>
-          <div class="center card card-hover integration-item">
-            <div class="center integration-icon"><i class="iconoir-user"></i></div>
-            <span class="center">Dr. Fulano de Tal</span>
-            <p class="topleft">Implantodontia — CRO 00000</p>
-          </div>
-          <div class="center card card-hover integration-item">
-            <div class="center integration-icon"><i class="iconoir-user"></i></div>
-            <span class="center">Dra. Fulana de Tal</span>
-            <p class="topleft">Odontopediatria — CRO 00000</p>
-          </div>
+        <div class="card-grid">
+          {% for profissional in equipe %}
+          <a href="{{ profissional.slug | prepend: '/equipe/' | append: '/' | url }}" class="center card card-hover img-card-grid">
+            <div class="img-card-grid-image"><img src="{{ profissional.image | url }}" alt="{{ profissional.alt }}"></div>
+            <div class="img-card-grid-details">
+              <div class="img-card-grid-title">{{ profissional.name }}</div>
+              <div class="img-card-grid-description">{{ profissional.specialization }}</div>
+              <div class="img-card-grid-description">{{ profissional.experience }}</div>
+            </div>
+          </a>
+          {% endfor %}
         </div>
       </div>
     </div>

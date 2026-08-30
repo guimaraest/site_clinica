@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Dra. Cristiana",
+    "slug": "dra-cristiana",
+    "specialization": "Clínica geral e estética odontológica",
+    "experience": "Mais de 10 anos de experiência",
+    "registration": "CRO 00000",
+    "lattes-url": "https://lattes.cnpq.br/SEU_ID_CRISTIANA",
+    "image": "/assets/images/generic_doctor.jpg",
+    "alt": "Dra. Cristiana"
+  },
+  {
+    "name": "Dr. Vinicius",
+    "slug": "dr-vinicius",
+    "specialization": "Implantodontia e reabilitação oral",
+    "experience": "Mais de 10 anos de experiência",
+    "registration": "CRO 00000",
+    "lattes-url": "https://lattes.cnpq.br/SEU_ID_VINICIUS",
+    "image": "/assets/images/generic_doctor.jpg",
+    "alt": "Dr. Vinicius"
+  },
+  {
+    "name": "Dr. Cássio",
+    "slug": "dr-cassio",
+    "specialization": "Ortodontia",
+    "experience": "Mais de 10 anos de experiência",
+    "registration": "CRO 00000",
+    "lattes-url": "https://lattes.cnpq.br/SEU_ID_CASSIO",
+    "image": "/assets/images/generic_doctor.jpg",
+    "alt": "Dr. Cássio"
+  }
+]

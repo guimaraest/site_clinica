@@ -1,0 +1,68 @@
+---
+pagination:
+  data: equipe
+  size: 1
+  alias: profissional
+permalink: "equipe/{{ profissional.slug }}/index.html"
+pagename: equipe-profissional
+layout: layouts/base.liquid
+stylesheet: /css/page/equipe.css
+title: "{{ profissional.name }} | Clínica Odontológica"
+---
+
+<section class="section hero-section hero-gradient" id="perfil">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="column">
+				<div class="hero-text">
+					<h1>{{ profissional.name }}</h1>
+					<p class="subheading">{{ profissional.specialization }}</p>
+				</div>
+			</div>
+			<div class="column">
+				<div class="professional-profile-image">
+					<img src="{{ profissional.image | url }}" alt="{{ profissional.alt }}">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section" id="experiencia">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="column">
+				<h2>Experiência e especialização</h2>
+				<div class="card-grid professional-details-grid">
+					<div class="card info-card">
+						<div class="professional-fact-heading"><i class="iconoir-hourglass"></i><h3>Experiência</h3></div>
+						<p>{{ profissional.experience }}</p>
+					</div>
+					<div class="card info-card">
+						<div class="professional-fact-heading"><i class="iconoir-bookmark-book"></i><h3>Especialização</h3></div>
+						<p>{{ profissional.specialization }}</p>
+					</div>
+					<div class="card info-card">
+						<div class="professional-fact-heading"><i class="iconoir-check-circle"></i><h3>Registro profissional</h3></div>
+						<p>{{ profissional.registration }}</p>
+					</div>
+					<div class="card info-card">
+						<div class="professional-fact-heading"><h3>Currículo Lattes</h3></div>
+						<a href="{{ profissional.lattes-url }}" target="_blank" rel="noopener noreferrer" class="professional-lattes-link"><i class="iconoir-page"></i><span>Ver perfil acadêmico</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section" id="agendar">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="column center">
+				<h2>Quer falar com {{ profissional.name }}?</h2>
+				<a href="/#agendar" class="btn-primary">Agendar consulta</a>
+			</div>
+		</div>
+	</div>
+</section>
