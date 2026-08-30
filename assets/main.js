@@ -34,9 +34,11 @@ class HamburgerMenu extends HTMLElement {
   }
 
   close () {
+    this.isOpen = false;
     this.menuButton.setAttribute('aria-expanded', 'false');
     this.nav.setAttribute('aria-hidden', 'true');
     this.header.classList.remove('open');
+    this.menuButton.classList.remove('open');
     document.documentElement.style.overflow = '';
     this.menuButton.focus();
   }
