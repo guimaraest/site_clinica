@@ -120,7 +120,7 @@ stylesheet: /css/page/clareamento.css
 				<h2 class="center">Quer saber se o clareamento é indicado para você?</h2>
 				<p class="paragraph center">Agende uma avaliação e descubra as possibilidades para o seu sorriso.</p>
 				<div class="hero-buttons center">
-					<a href="{{ nav.button.url | url }}" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="iconoir-whatsapp" aria-hidden="true"></i>{{ nav.button.title }}</a>
+					{% include "cta/whatsapp-primary.liquid" %}
 				</div>
 			</div>
 		</div>

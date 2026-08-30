@@ -140,7 +140,7 @@ stylesheet: /css/page/restauracao.css
 				<h2 class="center">Está com dor ou sensibilidade?</h2>
 				<p class="paragraph center">Agende uma consulta quanto antes — quanto antes avaliarmos, mais simples tende a ser o tratamento.</p>
 				<div class="hero-buttons center">
-					<a href="{{ nav.button.url | url }}" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="iconoir-whatsapp" aria-hidden="true"></i>{{ nav.button.title }}</a>
+					{% include "cta/whatsapp-primary.liquid" %}
 				</div>
 			</div>
 		</div>
