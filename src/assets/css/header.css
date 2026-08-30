@@ -100,10 +100,28 @@ hamburger-menu {
     padding: calc(var(--space-8) + env(safe-area-inset-top)) var(--section-padding-horizontal) var(--space-8);
   }
 
+  .header-main {
+    display: flex;
+    align-items: center;
+    gap: var(--space-12);
+  }
+
+  .brand {
+    flex-shrink: 0;
+  }
+
+  .brand-name {
+    display: none;
+  }
+
   .nav-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
     gap: var(--space-8);
+    width: auto;
   }
 
   .menu-button {
@@ -116,6 +134,7 @@ hamburger-menu {
     border: none;
     cursor: pointer;
     color: var(--text);
+    flex-shrink: 0;
   }
 
   .nav {
@@ -133,10 +152,12 @@ hamburger-menu {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-12);
+    width: 100%;
+    padding: var(--space-8) 0 0;
   }
 
   .header-container { flex-wrap: nowrap; }
-  .header-main { flex-wrap: wrap; }
+  .header-main { flex-wrap: nowrap; }
   .nav-wrapper { order: 3; flex: 1 0 100%; }
   .header-action { order: 2; }
   .header-address { font-size: var(--text-12); overflow: hidden; text-overflow: ellipsis; }
@@ -225,5 +246,7 @@ hamburger-menu {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .nav,
+  .nav {
+    transition: none;
+  }
 }
