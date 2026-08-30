@@ -24,7 +24,7 @@
 
     /* layout */
     --section-padding-horizontal: clamp(24px, 8vw, 160px);
-    --section-padding-vertical: 60px;
+    --section-padding-vertical: 120px;
     --section-max-width: 1440px;
     --header-height: 60px;
     --hamburger-dimensions: 36px;

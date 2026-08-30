@@ -12,7 +12,7 @@
 }
 
 .hero-section .section-content {
-  min-height: 400px;
+  min-height: unset;
 }
 
 .hero-image-column {
