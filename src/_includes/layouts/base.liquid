@@ -8,7 +8,7 @@
     {% if title %}{{ title }} · {{ site.name }}{% else %}{{ site.name }}{% endif %}
   </title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+  <link rel="stylesheet" href="{{ 'https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css' | url }}" />
 
   <script src="{{ '/assets/main.js' | url }}" defer></script>
   <link rel="stylesheet" href="{{ '/assets/css/base.css' | url }}">
@@ -19,9 +19,9 @@
 
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="{{ 'https://fonts.googleapis.com' | url }}">
+  <link rel="preconnect" href="{{ 'https://fonts.gstatic.com' | url }}" crossorigin>
+  <link href="{{ 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap' | url }}" rel="stylesheet">
 </head>
 <body class="page-{{ pagename }}">
 

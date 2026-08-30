@@ -9,13 +9,13 @@
         </div>
         <div class="footer-column footer-contact">
           <span class="footer-label">Fale conosco</span>
-          <a href="mailto:{{ footer.contact.email }}" class="link">{{ footer.contact.email }}</a>
-          <a href="/#agendar" class="link">Agende uma consulta</a>
+          <a href="{{ 'mailto:' | append: footer.contact.email | url }}" class="link">{{ footer.contact.email }}</a>
+          <a href="{{ '/#agendar' | url }}" class="link">Agende uma consulta</a>
         </div>
         <div class="footer-column">
           <span class="footer-label">Acompanhe</span>
           <nav class="footer-social">
-            {% for item in footer.social %}<a href="{{ item.url }}" rel="noopener" target="_blank" class="link">{{ item.name }}</a>{% endfor %}
+            {% for item in footer.social %}<a href="{{ item.url | url }}" rel="noopener" target="_blank" class="link">{{ item.name }}</a>{% endfor %}
           </nav>
         </div>
       </div>

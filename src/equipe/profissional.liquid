@@ -48,7 +48,7 @@ title: "{{ profissional.name }} | Clínica Odontológica"
 					</div>
 					<div class="card info-card">
 						<div class="professional-fact-heading"><h3>Currículo Lattes</h3></div>
-						<a href="{{ profissional.lattes-url }}" target="_blank" rel="noopener noreferrer" class="professional-lattes-link"><i class="iconoir-page"></i><span>Ver perfil acadêmico</span></a>
+						<a href="{{ profissional.lattes-url | url }}" target="_blank" rel="noopener noreferrer" class="professional-lattes-link"><i class="iconoir-page"></i><span>Ver perfil acadêmico</span></a>
 					</div>
 				</div>
 			</div>
@@ -61,7 +61,7 @@ title: "{{ profissional.name }} | Clínica Odontológica"
 		<div class="section-content">
 			<div class="column center">
 				<h2>Quer falar com {{ profissional.name }}?</h2>
-				<a href="/#agendar" class="btn-primary">Agendar consulta</a>
+				<a href="{{ '/#agendar' | url }}" class="btn-primary">Agendar consulta</a>
 			</div>
 		</div>
 	</div>

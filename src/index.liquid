@@ -15,8 +15,8 @@ stylesheet: /css/page/home.css
 					<p class="subheading">Atendimento odontológico completo, com tecnologia moderna e uma equipe pronta para cuidar de você em cada etapa do tratamento.</p>
 				</div>
 				<div class="hero-buttons">
-					<a href="#agendar" target="_blank" rel="noopener noreferrer" class="btn-primary">Agendar Online</a>
-					<a href="https://wa.me/SEUNUMERO" class="btn">WhatsApp</a>
+					<a href="{{ '#agendar' | url }}" target="_blank" rel="noopener noreferrer" class="btn-primary">Agendar Online</a>
+					<a href="{{ 'https://wa.me/SEUNUMERO' | url }}" class="btn">WhatsApp</a>
 				</div>
 				<div class="hero-trust"><span><i class="iconoir-shield-check"></i> Atendimento acolhedor</span><span><i class="iconoir-spark"></i> Tecnologia e precisão</span></div>
 			</div>
@@ -29,29 +29,29 @@ stylesheet: /css/page/home.css
   <div class="section-container">
     <div class="section-content">
       <div class="column">
-        <div class="section-heading"><div><span class="eyebrow">Tratamentos</span><h2>Cuidado pensado para o seu momento</h2></div><a class="text-link" href="/servicos/">Ver todos os serviços <i class="iconoir-arrow-right"></i></a></div>
+        <div class="section-heading"><div><span class="eyebrow">Tratamentos</span><h2>Cuidado pensado para o seu momento</h2></div><a class="text-link" href="{{ '/servicos/' | url }}">Ver todos os serviços <i class="iconoir-arrow-right"></i></a></div>
         <div class="card-grid services-grid">
-          <a href="/servicos/restauracao/" class="center card card-hover img-card-grid">
+          <a href="{{ '/servicos/restauracao/' | url }}" class="center card card-hover img-card-grid">
             <div class="img-card-grid-image"><img src="{{ '/assets/images/pexels-cottonbro-6502745.jpg' | url }}" alt="Restauração (Dor de Dente)"></div>
             <div class="img-card-grid-title">Restauração (Dor de Dente)</div>
           </a>
-          <a href="/servicos/clareamento/" class="center card card-hover img-card-grid">
+          <a href="{{ '/servicos/clareamento/' | url }}" class="center card card-hover img-card-grid">
             <div class="img-card-grid-image"><img src="{{ '/assets/images/whitening4.jpg' | url }}" alt="Clareamento"></div>
             <div class="img-card-grid-title">Clareamento</div>
           </a>
-          <a href="/servicos/aparelho/" class="center card card-hover img-card-grid">
+          <a href="{{ '/servicos/aparelho/' | url }}" class="center card card-hover img-card-grid">
             <div class="img-card-grid-image"><img src="{{ '/assets/images/braces.jpg' | url }}" alt="Aparelhos (Ortodontia)"></div>
             <div class="img-card-grid-title">Aparelhos (Ortodontia)</div>
           </a>
-          <a href="/servicos/implante/" class="center card card-hover img-card-grid">
+          <a href="{{ '/servicos/implante/' | url }}" class="center card card-hover img-card-grid">
             <div class="img-card-grid-image"><img src="{{ '/assets/images/implant.jpg' | url }}" alt="Implante"></div>
             <div class="img-card-grid-title">Implante</div>
           </a>
-          <a href="/servicos/protese/" class="center card card-hover img-card-grid">
+          <a href="{{ '/servicos/protese/' | url }}" class="center card card-hover img-card-grid">
             <div class="img-card-grid-image"><img src="{{ '/assets/images/prosthesis.jpg' | url }}" alt="Prótese"></div>
             <div class="img-card-grid-title">Prótese</div>
           </a>
-          <a href="/servicos/estetica/" class="center card card-hover img-card-grid">
+          <a href="{{ '/servicos/estetica/' | url }}" class="center card card-hover img-card-grid">
             <div class="img-card-grid-image"><img src="{{ '/assets/images/botox.jpg' | url }}" alt="Harmonização Orofacial"></div>
             <div class="img-card-grid-title">Harmonização Orofacial</div>
           </a>
@@ -65,9 +65,9 @@ stylesheet: /css/page/home.css
   <div class="section-container">
     <div class="section-content">
       <div class="column">
-        <div class="section-heading"><div><span class="eyebrow">Nossa equipe</span><h2>Gente que cuida de gente</h2></div><a class="text-link" href="/equipe/">Conheça a equipe <i class="iconoir-arrow-right"></i></a></div>
+        <div class="section-heading"><div><span class="eyebrow">Nossa equipe</span><h2>Gente que cuida de gente</h2></div><a class="text-link" href="{{ '/equipe/' | url }}">Conheça a equipe <i class="iconoir-arrow-right"></i></a></div>
         <div class="card-grid team-grid">
-          <a href="/equipe/dra-cristiana/" class="center card card-hover img-card-grid team-card">
+          <a href="{{ '/equipe/dra-cristiana/' | url }}" class="center card card-hover img-card-grid team-card">
             <div class="img-card-grid-image"><img src="{{ '/assets/images/generic_doctor.jpg' | url }}" alt="Dra. Cristiana"></div>
             <div class="img-card-grid-details">
               <div class="img-card-grid-title">Dra. Cristiana</div>
@@ -77,7 +77,7 @@ stylesheet: /css/page/home.css
               </div>
             </div>
           </a>
-          <a href="/equipe/dr-vinicius/" class="center card card-hover img-card-grid team-card">
+          <a href="{{ '/equipe/dr-vinicius/' | url }}" class="center card card-hover img-card-grid team-card">
             <div class="img-card-grid-image"><img src="{{ '/assets/images/generic_doctor.jpg' | url }}" alt="Dr. Vinicius"></div>
             <div class="img-card-grid-details">
               <div class="img-card-grid-title">Dr. Vinicius</div>
@@ -87,7 +87,7 @@ stylesheet: /css/page/home.css
               </div>
             </div>
           </a>
-          <a href="/equipe/dr-cassio/" class="center card card-hover img-card-grid team-card">
+          <a href="{{ '/equipe/dr-cassio/' | url }}" class="center card card-hover img-card-grid team-card">
             <div class="img-card-grid-image"><img src="{{ '/assets/images/generic_doctor.jpg' | url }}" alt="Dr. Cássio"></div>
             <div class="img-card-grid-details">
               <div class="img-card-grid-title">Dr. Cássio</div>
@@ -113,7 +113,7 @@ stylesheet: /css/page/home.css
 				<div class="map-embed">
 					<iframe src="https://www.google.com/maps/embed?pb=SEU_EMBED" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
-				<a href="https://maps.google.com/?q=SEU_ENDERECO" target="_blank" rel="noopener noreferrer" class="btn">Como chegar</a>
+				<a href="{{ 'https://maps.google.com/?q=SEU_ENDERECO' | url }}" target="_blank" rel="noopener noreferrer" class="btn">Como chegar</a>
 			</div>
 		</div>
 	</div>
@@ -125,10 +125,10 @@ stylesheet: /css/page/home.css
 			<div class="column">
 				<span class="eyebrow">Seu próximo passo</span><h2>Agende sua consulta</h2><p class="subheading">Conte o que você precisa. Nós ajudamos a encontrar o melhor caminho.</p>
 				<div class="hero-buttons">
-					<a href="#" target="_blank" rel="noopener noreferrer" class="btn-primary">Agendar Online</a>
-					<a href="https://wa.me/SEUNUMERO" class="btn">WhatsApp</a>
+					<a href="{{ '#' | url }}" target="_blank" rel="noopener noreferrer" class="btn-primary">Agendar Online</a>
+					<a href="{{ 'https://wa.me/SEUNUMERO' | url }}" class="btn">WhatsApp</a>
 				</div>
-				<a href="https://wa.me/SEUNUMERO?text=Quero%20tirar%20uma%20d%C3%BAvida" class="btn-link">Tirar dúvidas antes de agendar</a>
+				<a href="{{ 'https://wa.me/SEUNUMERO?text=Quero%20tirar%20uma%20d%C3%BAvida' | url }}" class="btn-link">Tirar dúvidas antes de agendar</a>
 			</div>
 		</div>
 	</div>
