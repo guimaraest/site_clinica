@@ -45,81 +45,21 @@
       <nav id="headerNav" class="nav" aria-hidden="false">
         <ul class="nav-links">
           
-            
-              <li class="nav-item">
-                <a href="/site_clinica/" class="link">home</a>
-              </li>
-            
+            <li class="nav-item">
+              <a href="/site_clinica/" class="link">home</a>
+            </li>
           
-            
-              <li class="nav-item dropdown-parent">
-                <dropdown-menu>
-                  <button type="button" class="dropdown-button button-clear" aria-expanded="false">
-                    serviços
-                    <!-- manual -->
-<span
-  class="svg-include-span "
-  aria-hidden="true"
-> 
-  
-    <?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M6 9L12 15L18 9" stroke="var(--text)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-  
-</span>
-                  </button>
-                  <ul class="card dropdown-list">
-                    
-                      <li><a href="/site_clinica/servicos/restauracao/" class="link">dor de dente e carie (restauração)</a></li>
-                    
-                      <li><a href="/site_clinica/servicos/implante/" class="link">extração (implante)</a></li>
-                    
-                      <li><a href="/site_clinica/servicos/aparelho/" class="link">aparelho (ortodontia)</a></li>
-                    
-                      <li><a href="/site_clinica/servicos/protese/" class="link">prótese</a></li>
-                    
-                      <li><a href="/site_clinica/servicos/clareamento/" class="link">clareamento</a></li>
-                    
-                      <li><a href="/site_clinica/servicos/estetica/" class="link">estetica (harmonização)</a></li>
-                    
-                      <li><a href="/site_clinica/servicos/outros/" class="link">outros</a></li>
-                    
-                  </ul>
-                </dropdown-menu>
-              </li>
-            
+            <li class="nav-item">
+              <a href="/site_clinica/servicos/" class="link">serviços</a>
+            </li>
           
-            
-              <li class="nav-item">
-                <a href="/site_clinica/localizacao/" class="link">localização</a>
-              </li>
-            
+            <li class="nav-item">
+              <a href="/site_clinica/localizacao/" class="link">localização</a>
+            </li>
           
-            
-              <li class="nav-item dropdown-parent">
-                <dropdown-menu>
-                  <button type="button" class="dropdown-button button-clear" aria-expanded="false">
-                    nossa equipe
-                    <!-- manual -->
-<span
-  class="svg-include-span "
-  aria-hidden="true"
-> 
-  
-    <?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M6 9L12 15L18 9" stroke="var(--text)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-  
-</span>
-                  </button>
-                  <ul class="card dropdown-list">
-                    
-                      <li><a href="/site_clinica/servicos/dra-cristiana/" class="link">Dra. Cristiana Maria</a></li>
-                    
-                      <li><a href="/site_clinica/servicos/dr-vinicius/" class="link">Dr. Vinicius</a></li>
-                    
-                      <li><a href="/site_clinica/servicos/dr-cassio/" class="link">Dr. Cássio</a></li>
-                    
-                  </ul>
-                </dropdown-menu>
-              </li>
-            
+            <li class="nav-item">
+              <a href="/site_clinica/equipe/" class="link">nossa equipe</a>
+            </li>
           
         </ul>
       </nav>
@@ -138,7 +78,7 @@
   <main>
     <div class="main-container">
       
-<section class="section hero-section hero-gradient" id="hero">
+<section class="section hero-section hero-image-background" id="hero" style="--hero-image: url('/site_clinica/assets/images/hero_image.png');">
 	<div class="section-container">
 		<div class="section-content">
 			<div class="column">
@@ -151,10 +91,7 @@
 					<a href="https://wa.me/SEUNUMERO" class="btn">WhatsApp</a>
 				</div>
 			</div>
-			<div class="column">
-				<div class="hero-image">
-				</div>
-			</div>
+      <div class="column hero-image-column" aria-hidden="true"></div>
 		</div>
 	</div>
 </section>
@@ -165,29 +102,29 @@
       <div class="column">
         <h2 class="center">O que oferecemos</h2>
         <div class="card-grid">
-          <a href="/servicos/restauracao/" class="center card card-hover service-card">
-            <img src="/site_clinica/assets/images/pexels-cottonbro-6502745.jpg" alt="Restauração (Dor de Dente)">
-            <span class="center">Restauração (Dor de Dente)</span>
+          <a href="/servicos/restauracao/" class="center card card-hover img-card-grid">
+            <div class="img-card-grid-image"><img src="/site_clinica/assets/images/pexels-cottonbro-6502745.jpg" alt="Restauração (Dor de Dente)"></div>
+            <div class="img-card-grid-title">Restauração (Dor de Dente)</div>
           </a>
-          <a href="/servicos/clareamento/" class="center card card-hover service-card">
-            <img src="/site_clinica/assets/images/whitening4.jpg" alt="Clareamento">
-            <span class="center">Clareamento</span>
+          <a href="/servicos/clareamento/" class="center card card-hover img-card-grid">
+            <div class="img-card-grid-image"><img src="/site_clinica/assets/images/whitening4.jpg" alt="Clareamento"></div>
+            <div class="img-card-grid-title">Clareamento</div>
           </a>
-          <a href="/servicos/aparelho/" class="center card card-hover service-card">
-            <img src="/site_clinica/assets/images/braces.jpg" alt="Aparelhos (Ortodontia)">
-            <span class="center">Aparelhos (Ortodontia)</span>
+          <a href="/servicos/aparelho/" class="center card card-hover img-card-grid">
+            <div class="img-card-grid-image"><img src="/site_clinica/assets/images/braces.jpg" alt="Aparelhos (Ortodontia)"></div>
+            <div class="img-card-grid-title">Aparelhos (Ortodontia)</div>
           </a>
-          <a href="/servicos/implante/" class="center card card-hover service-card">
-            <img src="/site_clinica/assets/images/implant.jpg" alt="Implante">
-            <span class="center">Implante</span>
+          <a href="/servicos/implante/" class="center card card-hover img-card-grid">
+            <div class="img-card-grid-image"><img src="/site_clinica/assets/images/implant.jpg" alt="Implante"></div>
+            <div class="img-card-grid-title">Implante</div>
           </a>
-          <a href="/servicos/protese/" class="center card card-hover service-card">
-            <img src="/site_clinica/assets/images/prosthesis.jpg" alt="Prótese">
-            <span class="center">Prótese</span>
+          <a href="/servicos/protese/" class="center card card-hover img-card-grid">
+            <div class="img-card-grid-image"><img src="/site_clinica/assets/images/prosthesis.jpg" alt="Prótese"></div>
+            <div class="img-card-grid-title">Prótese</div>
           </a>
-          <a href="/servicos/estetica/" class="center card card-hover service-card">
-            <img src="/site_clinica/assets/images/botox.jpg" alt="Harmonização Orofacial">
-            <span class="center">Harmonização Orofacial</span>
+          <a href="/servicos/estetica/" class="center card card-hover img-card-grid">
+            <div class="img-card-grid-image"><img src="/site_clinica/assets/images/botox.jpg" alt="Harmonização Orofacial"></div>
+            <div class="img-card-grid-title">Harmonização Orofacial</div>
           </a>
         </div>
       </div>
@@ -200,22 +137,37 @@
     <div class="section-content">
       <div class="column">
         <h2 class="center">Quem cuida do seu sorriso</h2>
-        <div class="integration-list">
-          <div class="center card card-hover">
-            <div class="center integration-icon"><i class="iconoir-user"></i></div>
-            <span class="center">Dra. Fulana de Tal</span>
-            <p class="topleft">Ortodontia — CRO 00000</p>
-          </div>
-          <div class="center card card-hover">
-            <div class="center integration-icon"><i class="iconoir-user"></i></div>
-            <span class="center">Dr. Fulano de Tal</span>
-            <p class="topleft">Implantodontia — CRO 00000</p>
-          </div>
-          <div class="center card card-hover">
-            <div class="center integration-icon"><i class="iconoir-user"></i></div>
-            <span class="center">Dra. Fulana de Tal</span>
-            <p class="topleft">Odontopediatria — CRO 00000</p>
-          </div>
+        <div class="card-grid">
+          <a href="/equipe/dra-cristiana/" class="center card card-hover img-card-grid team-card">
+            <div class="img-card-grid-image"><img src="/site_clinica/assets/images/generic_doctor.jpg" alt="Dra. Cristiana"></div>
+            <div class="img-card-grid-details">
+              <div class="img-card-grid-title">Dra. Cristiana</div>
+              <div class="team-card-muted-content">
+                <div class="img-card-grid-description">Clínica geral e estética odontológica</div>
+                <div class="img-card-grid-description">Mais de 10 anos de experiência</div>
+              </div>
+            </div>
+          </a>
+          <a href="/equipe/dr-vinicius/" class="center card card-hover img-card-grid team-card">
+            <div class="img-card-grid-image"><img src="/site_clinica/assets/images/generic_doctor.jpg" alt="Dr. Vinicius"></div>
+            <div class="img-card-grid-details">
+              <div class="img-card-grid-title">Dr. Vinicius</div>
+              <div class="team-card-muted-content">
+                <div class="img-card-grid-description">Implantodontia e reabilitação oral</div>
+                <div class="img-card-grid-description">Mais de 10 anos de experiência</div>
+              </div>
+            </div>
+          </a>
+          <a href="/equipe/dr-cassio/" class="center card card-hover img-card-grid team-card">
+            <div class="img-card-grid-image"><img src="/site_clinica/assets/images/generic_doctor.jpg" alt="Dr. Cássio"></div>
+            <div class="img-card-grid-details">
+              <div class="img-card-grid-title">Dr. Cássio</div>
+              <div class="team-card-muted-content">
+                <div class="img-card-grid-description">Ortodontia</div>
+                <div class="img-card-grid-description">Mais de 10 anos de experiência</div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>

@@ -24,7 +24,7 @@
 
     /* layout */
     --section-padding-horizontal: clamp(24px, 8vw, 160px);
-    --section-padding-vertical: 60px;
+    --section-padding-vertical: 120px;
     --section-max-width: 1440px;
     --header-height: 60px;
     --hamburger-dimensions: 36px;
@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6, p, small {
 }
 
 .section-content {
-    gap: var(--space-24);
+    gap: var(--space-72);
     width: 100%;
     height: fit-content;
     padding: 0;
@@ -396,6 +396,11 @@ hr {
     justify-content: flex-start;
     gap: var(--space-24);
     align-items: stretch;
+    height: auto;
+  }
+
+  .section-content > .column {
+    flex: 0 1 auto;
   }
 
   .link {

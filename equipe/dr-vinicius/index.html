@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>
-    Serviços | Clínica Odontológica · 
+    {{ profissional.name }} | Clínica Odontológica · 
   </title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="/site_clinica/assets/css/components.css">
   <link rel="stylesheet" href="/site_clinica/assets/css/header.css">
   <link rel="stylesheet" href="/site_clinica/assets/css/footer.css">
-  <link rel="stylesheet" href="/site_clinica/assets/css/page/servicos.css">
+  <link rel="stylesheet" href="/site_clinica/assets/css/page/equipe.css">
 
 
   <!-- Google Fonts -->
@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body class="page-servico">
+<body class="page-equipe-profissional">
 
   <header class="header" id="siteHeader">
   <div class="header-container">
@@ -78,40 +78,61 @@
   <main>
     <div class="main-container">
       
-<section class="section" id="lista-servicos">
-  <div class="section-container">
-    <div class="section-content">
-      <div class="column">
-        <h2 class="center">O que oferecemos</h2>
-        <div class="card-grid">
-          <a href="/servicos/restauracao/" class="center card card-hover img-card-grid">
-            <div class="img-card-grid-image"><img src="/site_clinica/assets/images/pexels-cottonbro-6502745.jpg" alt="Restauração (Dor de Dente)"></div>
-            <div class="img-card-grid-title">Restauração (Dor de Dente)</div>
-          </a>
-          <a href="/servicos/clareamento/" class="center card card-hover img-card-grid">
-            <div class="img-card-grid-image"><img src="/site_clinica/assets/images/whitening4.jpg" alt="Clareamento"></div>
-            <div class="img-card-grid-title">Clareamento</div>
-          </a>
-          <a href="/servicos/aparelho/" class="center card card-hover img-card-grid">
-            <div class="img-card-grid-image"><img src="/site_clinica/assets/images/braces.jpg" alt="Aparelhos (Ortodontia)"></div>
-            <div class="img-card-grid-title">Aparelhos (Ortodontia)</div>
-          </a>
-          <a href="/servicos/implante/" class="center card card-hover img-card-grid">
-            <div class="img-card-grid-image"><img src="/site_clinica/assets/images/implant.jpg" alt="Implante"></div>
-            <div class="img-card-grid-title">Implante</div>
-          </a>
-          <a href="/servicos/protese/" class="center card card-hover img-card-grid">
-            <div class="img-card-grid-image"><img src="/site_clinica/assets/images/prosthesis.jpg" alt="Prótese"></div>
-            <div class="img-card-grid-title">Prótese</div>
-          </a>
-          <a href="/servicos/estetica/" class="center card card-hover img-card-grid">
-            <div class="img-card-grid-image"><img src="/site_clinica/assets/images/botox.jpg" alt="Harmonização Orofacial"></div>
-            <div class="img-card-grid-title">Harmonização Orofacial</div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="section hero-section hero-gradient" id="perfil">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="column">
+				<div class="hero-text">
+					<h1>Dr. Vinicius</h1>
+					<p class="subheading">Implantodontia e reabilitação oral</p>
+				</div>
+			</div>
+			<div class="column">
+				<div class="professional-profile-image">
+					<img src="/site_clinica/assets/images/generic_doctor.jpg" alt="Dr. Vinicius">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section" id="experiencia">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="column">
+				<h2>Experiência e especialização</h2>
+				<div class="card-grid professional-details-grid">
+					<div class="card info-card">
+						<div class="professional-fact-heading"><i class="iconoir-hourglass"></i><h3>Experiência</h3></div>
+						<p>Mais de 10 anos de experiência</p>
+					</div>
+					<div class="card info-card">
+						<div class="professional-fact-heading"><i class="iconoir-bookmark-book"></i><h3>Especialização</h3></div>
+						<p>Implantodontia e reabilitação oral</p>
+					</div>
+					<div class="card info-card">
+						<div class="professional-fact-heading"><i class="iconoir-check-circle"></i><h3>Registro profissional</h3></div>
+						<p>CRO 00000</p>
+					</div>
+					<div class="card info-card">
+						<div class="professional-fact-heading"><h3>Currículo Lattes</h3></div>
+						<a href="https://lattes.cnpq.br/SEU_ID_VINICIUS" target="_blank" rel="noopener noreferrer" class="professional-lattes-link"><i class="iconoir-page"></i><span>Ver perfil acadêmico</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section" id="agendar">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="column center">
+				<h2>Quer falar com Dr. Vinicius?</h2>
+				<a href="/#agendar" class="btn-primary">Agendar consulta</a>
+			</div>
+		</div>
+	</div>
 </section>
     </div>
   </main>
