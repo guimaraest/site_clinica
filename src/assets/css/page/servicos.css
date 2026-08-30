@@ -2,4 +2,13 @@
 .services-hero .section-intro { display: grid; gap: var(--space-16); max-width: 760px; text-align: center; margin: 0 auto; }
 .services-hero .section-intro .subheading { max-width: 680px; margin: 0 auto; }
 .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-@media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; } }
+
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .services-hero .section-intro { text-align: left; }
+  .services-hero .section-intro .subheading { margin: 0; }
+}

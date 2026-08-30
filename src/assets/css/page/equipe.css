@@ -61,4 +61,22 @@
 .professional-details-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .professional-details-grid .card { min-height: 180px; justify-content: center; padding: var(--space-24); border-top: 3px solid var(--primary); }
 .professional-details-grid h3 { color: var(--text); font-size: var(--text-18); }
-@media (max-width: 768px) { .team-list, .professional-details-grid { grid-template-columns: 1fr; } .page-equipe #lista-equipe .section-container { padding-top: 64px; padding-bottom: 64px; } }
+@media (max-width: 768px) {
+  .team-list,
+  .professional-details-grid { grid-template-columns: 1fr; }
+
+  .team-entry {
+    gap: var(--space-8);
+  }
+
+  .team-card-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .team-card {
+    padding: var(--space-20);
+  }
+
+  .page-equipe #lista-equipe .section-container { padding-top: 64px; padding-bottom: 64px; }
+}

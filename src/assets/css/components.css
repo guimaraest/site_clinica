@@ -26,12 +26,14 @@
   text-shadow: var(--text-shadow-sm);
 }
 
-.btn:hover,
-.btn:focus-visible,
-.btn-primary:hover,
-.btn-primary:focus-visible {
-    transform: translateY(3px);
-    cursor: pointer;
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover,
+  .btn:focus-visible,
+  .btn-primary:hover,
+  .btn-primary:focus-visible {
+      transform: translateY(3px);
+      cursor: pointer;
+  }
 }
 
 .btn span,
@@ -62,10 +64,12 @@
               background-color 0.2s ease-in-out;
 }
 
-.card-hover:hover,
-.card-hover:focus-visible {
-    transform: translateY(3px);
-    cursor: pointer;
+@media (hover: hover) and (pointer: fine) {
+  .card-hover:hover,
+  .card-hover:focus-visible {
+      transform: translateY(3px);
+      cursor: pointer;
+  }
 }
 
 .card-grid {
@@ -230,7 +234,12 @@
   .page-image {
     aspect-ratio: 16 / 10;
   }
+}
 
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .text-link { display: inline-flex; width: fit-content; align-items: center; gap: var(--space-8); color: var(--primary-muted); font-size: var(--text-16); font-weight: 700; white-space: nowrap; }
