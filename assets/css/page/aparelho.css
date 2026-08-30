@@ -46,7 +46,7 @@
 .hero-section { background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 9%, var(--bg)) 0%, var(--bg) 62%); }
 .hero-section h1 { line-height: 1.1; letter-spacing: -.03em; }
 .section-content:has(.page-image) { gap: clamp(32px, 5vw, 72px); }
-.page-image { border-radius: 18px; box-shadow: 0 16px 36px rgba(27, 54, 75, .11); }
+.page-image { border-radius: var(--radius-big); box-shadow: 0 16px 36px rgba(27, 54, 75, .11); }
 .info-card { border: 1px solid rgba(27, 54, 75, .08); box-shadow: 0 8px 20px rgba(27, 54, 75, .06); }
 .info-card span { color: var(--text); font-size: var(--text-18); font-weight: 700; }
 #agendar { background: var(--primary); }

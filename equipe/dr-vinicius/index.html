@@ -27,51 +27,22 @@
 
   <header class="header" id="siteHeader">
   <div class="header-container">
-    <a class="brand" href="/site_clinica/" aria-label="Concept Belvedere — página inicial">
-      <span class="brand-mark" aria-hidden="true">CB</span>
-      <span class="brand-name">Concept<br>Belvedere</span>
-    </a>
-    <div class="nav-wrapper">
-      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="headerNav" aria-label="Abrir menu">
-        <span class="menu-open" aria-hidden="true">
-          <svg class="svg-include " width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+    <div class="header-top">
+      <div class="header-address"><i class="iconoir-map-pin" aria-hidden="true"></i><span>Rua Exemplo, 123 — Bairro, Belo Horizonte/MG</span></div>
+      <div class="header-action"><a href="/site_clinica/#agendar" class="btn btn-nav"><span>entre em contato</span></a></div>
+    </div>
+    <div class="header-main">
+      <a class="brand" href="/site_clinica/" aria-label="Concept Belvedere — página inicial"><span class="brand-mark" aria-hidden="true">CB</span><span class="brand-name">Concept<br>Belvedere</span></a>
+      <div class="nav-wrapper">
+        <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="headerNav" aria-label="Abrir menu"><span class="menu-open" aria-hidden="true"><svg class="svg-include " width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
   <path d="M3 5H21M3 12H21M3 19H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 </svg>
-
-        </span>
-        <span class="menu-close" aria-hidden="true">
-          <svg class="svg-include " width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+</span><span class="menu-close" aria-hidden="true"><svg class="svg-include " width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
   <path d="M6.76 17.24L12 12M17.24 6.76L12 12M12 12L6.76 6.76M12 12L17.24 17.24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 </svg>
-
-        </span>
-      </button>
-      <nav id="headerNav" class="nav" aria-hidden="false">
-        <ul class="nav-links">
-          
-            <li class="nav-item">
-              <a href="/site_clinica/" class="link">home</a>
-            </li>
-          
-            <li class="nav-item">
-              <a href="/site_clinica/servicos/" class="link">serviços</a>
-            </li>
-          
-            <li class="nav-item">
-              <a href="/site_clinica/localizacao/" class="link">localização</a>
-            </li>
-          
-            <li class="nav-item">
-              <a href="/site_clinica/equipe/" class="link">nossa equipe</a>
-            </li>
-          
-        </ul>
-      </nav>
-    </div>
-    <div class="header-action">
-      <a href="/#agendar" class="btn btn-nav">
-        <span>entre em contato</span>
-      </a>
+</span></button>
+        <nav id="headerNav" class="nav" aria-hidden="false"><ul class="nav-links"><li class="nav-item"><a href="/site_clinica/" class="link">home</a></li><li class="nav-item"><a href="/site_clinica/servicos/" class="link">serviços</a></li><li class="nav-item"><a href="/site_clinica/localizacao/" class="link">localização</a></li><li class="nav-item"><a href="/site_clinica/equipe/" class="link">nossa equipe</a></li></ul></nav>
+      </div>
     </div>
   </div>
   <hamburger-menu></hamburger-menu>
@@ -86,7 +57,7 @@
 	<div class="section-container">
 		<div class="section-content">
 			<div class="column">
-				<div class="hero-text"><span class="eyebrow">Nossa equipe</span>
+				<div class="hero-text"><span class="kicker">Nossa equipe</span>
 					<h1>Dr. Vinicius</h1>
 					<p class="subheading">Implantodontia e reabilitação oral</p>
 				</div>
@@ -104,7 +75,7 @@
 	<div class="section-container">
 		<div class="section-content">
 			<div class="column">
-				<span class="eyebrow">Trajetória profissional</span><h2>Experiência e especialização</h2>
+				<span class="kicker">Trajetória profissional</span><h2>Experiência e especialização</h2>
 				<div class="card-grid professional-details-grid">
 					<div class="card info-card">
 						<div class="professional-fact-heading"><i class="iconoir-hourglass"></i><h3>Experiência</h3></div>
@@ -119,8 +90,8 @@
 						<p>CRO 00000</p>
 					</div>
 					<div class="card info-card">
-						<div class="professional-fact-heading"><h3>Currículo Lattes</h3></div>
-						<a href="https://lattes.cnpq.br/SEU_ID_VINICIUS" target="_blank" rel="noopener noreferrer" class="professional-lattes-link"><i class="iconoir-page"></i><span>Ver perfil acadêmico</span></a>
+						<div class="professional-fact-heading"><i class="iconoir-page"></i><h3>Currículo Lattes</h3></div>
+						<a href="https://lattes.cnpq.br/SEU_ID_VINICIUS" target="_blank" rel="noopener noreferrer" class="professional-lattes-link"><span>Ver perfil acadêmico</span></a>
 					</div>
 				</div>
 			</div>
@@ -133,7 +104,7 @@
 		<div class="section-content">
 			<div class="column center">
 				<h2>Quer falar com Dr. Vinicius?</h2>
-				<a href="/#agendar" class="btn-primary">Agendar consulta</a>
+				<a href="/site_clinica/#agendar" class="btn-primary">Agendar consulta</a>
 			</div>
 		</div>
 	</div>
@@ -153,13 +124,13 @@
         </div>
         <div class="footer-column footer-contact">
           <span class="footer-label">Fale conosco</span>
-          <a href="mailto:hello@lavie.com" class="link">hello@lavie.com</a>
-          <a href="/#agendar" class="link">Agende uma consulta</a>
+          <a href="https://wa.me/SEUNUMERO" class="link"><i class="iconoir-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a><a href="mailto:hello@lavie.com" class="link"><i class="iconoir-mail" aria-hidden="true"></i><span>E-mail</span></a>
         </div>
+        <div class="footer-column footer-address"><span class="footer-label">Endereço</span><p><i class="iconoir-map-pin" aria-hidden="true"></i>Rua Exemplo, 123 — Bairro, Belo Horizonte/MG</p></div>
         <div class="footer-column">
           <span class="footer-label">Acompanhe</span>
           <nav class="footer-social">
-            <a href="https://x.com/lavie" rel="noopener" target="_blank" class="link">X</a><a href="https://linkedin.com/company/lavie" rel="noopener" target="_blank" class="link">LinkedIn</a><a href="https://github.com/lavie" rel="noopener" target="_blank" class="link">GitHub</a>
+            <a href="https://instagram.com/SEU_PERFIL" rel="noopener" target="_blank" class="link" aria-label="Instagram"><i class="iconoir-instagram" aria-hidden="true"></i><span>@conceptbelvedere</span></a>
           </nav>
         </div>
       </div>

@@ -20,6 +20,9 @@
     --shadow-small:
     inset 0 1px 1px rgba(255, 255, 255, 0.25),
     0 2px 3px rgba(0, 0, 0, 0.15);
+
+    --text-shadow-sm: 0 3px 6px rgba(0, 0, 0, 0.1);
+    --text-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
     
 
     /* layout */
@@ -168,7 +171,7 @@ h1, h2, h3, h4, h5, h6, p, small {
 
 *::-webkit-scrollbar-thumb {
   background-color: var(--bg-light);
-  border-radius: 999px;
+  border-radius: var(--radius-small);
   box-shadow: var(--shadow);
 }
 
@@ -438,5 +441,3 @@ hr {
     font-size: var(--text-12);
   }
 }
-
-
