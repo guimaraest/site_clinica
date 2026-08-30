@@ -160,6 +160,8 @@
   position: relative;
   z-index: 2;
   order: 1;
+  height: 100%;
+  justify-content: space-between;
 }
 
 .team-card .img-card-grid-title {
@@ -169,6 +171,17 @@
 
 .team-card .img-card-grid-description {
   color: var(--text-muted);
+}
+
+.team-card-muted-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.team-card-muted-content .img-card-grid-description {
+  text-align: start;
 }
 
 .img-card-grid > * {
