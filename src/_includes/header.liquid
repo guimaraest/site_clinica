@@ -12,25 +12,9 @@
       <nav id="headerNav" class="nav" aria-hidden="false">
         <ul class="nav-links">
           {% for item in nav.nav %}
-            {% if item.children %}
-              <li class="nav-item dropdown-parent">
-                <dropdown-menu>
-                  <button type="button" class="dropdown-button button-clear" aria-expanded="false">
-                    {{ item.title }}
-                    {% include "icons/arrow-down.liquid", class: "dropdown-icon" %}
-                  </button>
-                  <ul class="card dropdown-list">
-                    {% for child in item.children %}
-                      <li><a href="{{ child.url | url }}" class="link">{{ child.title }}</a></li>
-                    {% endfor %}
-                  </ul>
-                </dropdown-menu>
-              </li>
-            {% else %}
-              <li class="nav-item">
-                <a href="{{ item.url | url }}" class="link">{{ item.title }}</a>
-              </li>
-            {% endif %}
+            <li class="nav-item">
+              <a href="{{ item.url | url }}" class="link">{{ item.title }}</a>
+            </li>
           {% endfor %}
         </ul>
       </nav>
