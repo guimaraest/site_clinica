@@ -190,6 +190,40 @@ hamburger-menu {
 
 }
 
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-8);
+  }
+
+  .header-main {
+    gap: var(--space-12);
+    align-items: center;
+  }
+
+  .brand-name {
+    font-size: 10px;
+  }
+
+  .header-action {
+    width: 100%;
+  }
+
+  .btn-nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .nav .link {
+    font-size: var(--text-16);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .nav,
 }

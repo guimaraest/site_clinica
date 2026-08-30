@@ -58,23 +58,20 @@
 .appointment-section .btn { background: transparent; border-color: rgba(255,255,255,.58); color: var(--bg-light); }
 
 @media (max-width: 768px) {
-  .home-hero h1 { font-size: clamp(2.5rem, 11vw, 3.5rem); }
-  .home-hero-image img { min-height: 0; aspect-ratio: 4 / 3; }
-  .services-preview .section-container, .team-preview .section-container { padding-top: 64px; padding-bottom: 64px; }
-  .team-list { grid-template-columns: 1fr; }
-  .section-heading { align-items: flex-start; flex-direction: column; }
-  .appointment-section .section-container { padding-top: 64px; padding-bottom: 64px; }
-}
+  .home-hero .section-content {
+    flex-direction: column;
+  }
 
-@media (max-width: 768px) {
+  .home-hero h1 { font-size: clamp(2.5rem, 11vw, 3.5rem); }
+  .home-hero-image { display: block; width: 100%; }
+  .home-hero-image img { min-height: 0; aspect-ratio: 4 / 3; }
   .hero-buttons {
     flex-direction: column;
     align-items: stretch;
     gap: var(--space-12);
   }
-
-  .hero-image-column {
-    display: none;
-  }
-
+  .services-preview .section-container, .team-preview .section-container { padding-top: 64px; padding-bottom: 64px; }
+  .team-list { grid-template-columns: 1fr; }
+  .section-heading { align-items: flex-start; flex-direction: column; }
+  .appointment-section .section-container { padding-top: 64px; padding-bottom: 64px; }
 }

@@ -66,9 +66,6 @@
     --section-padding-horizontal: 24px;
     --section-padding-vertical: 24px;
     --header-height: calc(52px + env(safe-area-inset-top));
-
-    --radius-big: 0px;
-    --radius-small: 0px;
   }
 }
 
