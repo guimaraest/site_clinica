@@ -5,9 +5,18 @@
     gap: var(--space-20);
 }
 
-.hero-image {
-  height: 100%;
-  aspect-ratio: 1/1;
+.hero-image-background {
+  background-image: var(--hero-image);
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-section .section-content {
+  min-height: 400px;
+}
+
+.hero-image-column {
+  visibility: hidden;
 }
 
 @media (max-width: 768px) {
@@ -17,13 +26,8 @@
     gap: var(--space-12);
   }
 
-  .hero-image {
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto var(--space-12);
-    height: auto;
-    aspect-ratio: 1/1;
-    object-fit: contain;
+  .hero-image-column {
+    display: none;
   }
 
 }
