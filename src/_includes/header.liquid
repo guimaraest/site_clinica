@@ -1,33 +1,15 @@
 <header class="header" id="siteHeader">
   <div class="header-container">
-    <a class="brand" href="{{ '/' | url }}" aria-label="Concept Belvedere — página inicial">
-      <span class="brand-mark" aria-hidden="true">CB</span>
-      <span class="brand-name">Concept<br>Belvedere</span>
-    </a>
-    <div class="header-address"><i class="iconoir-map-pin" aria-hidden="true"></i><span>{{ footer.contact.address }}</span></div>
-    <div class="nav-wrapper">
-      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="headerNav" aria-label="Abrir menu">
-        <span class="menu-open" aria-hidden="true">
-          {% include "icons/hamburger-open.liquid" %}
-        </span>
-        <span class="menu-close" aria-hidden="true">
-          {% include "icons/hamburger-close.liquid" %}
-        </span>
-      </button>
-      <nav id="headerNav" class="nav" aria-hidden="false">
-        <ul class="nav-links">
-          {% for item in nav.nav %}
-            <li class="nav-item">
-              <a href="{{ item.url | url }}" class="link">{{ item.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </nav>
+    <div class="header-top">
+      <div class="header-address"><i class="iconoir-map-pin" aria-hidden="true"></i><span>{{ footer.contact.address }}</span></div>
+      <div class="header-action"><a href="{{ '/#agendar' | url }}" class="btn btn-nav"><span>{{ nav.button.title }}</span></a></div>
     </div>
-    <div class="header-action">
-      <a href="{{ '/#agendar' | url }}" class="btn btn-nav">
-        <i class="iconoir-calendar-plus" aria-hidden="true"></i><span>{{ nav.button.title }}</span>
-      </a>
+    <div class="header-main">
+      <a class="brand" href="{{ '/' | url }}" aria-label="Concept Belvedere — página inicial"><span class="brand-mark" aria-hidden="true">CB</span><span class="brand-name">Concept<br>Belvedere</span></a>
+      <div class="nav-wrapper">
+        <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="headerNav" aria-label="Abrir menu"><span class="menu-open" aria-hidden="true">{% include "icons/hamburger-open.liquid" %}</span><span class="menu-close" aria-hidden="true">{% include "icons/hamburger-close.liquid" %}</span></button>
+        <nav id="headerNav" class="nav" aria-hidden="false"><ul class="nav-links">{% for item in nav.nav %}<li class="nav-item"><a href="{{ item.url | url }}" class="link">{{ item.title }}</a></li>{% endfor %}</ul></nav>
+      </div>
     </div>
   </div>
   <hamburger-menu></hamburger-menu>

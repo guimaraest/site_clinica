@@ -43,7 +43,8 @@
 .page-hero .section-container { padding-top: clamp(72px, 10vw, 144px); padding-bottom: clamp(72px, 10vw, 144px); }
 .page-hero .hero-text { gap: var(--space-16); max-width: 760px; }
 .page-equipe .page-hero .section-content { justify-content: center; text-align: center; }
-.page-equipe .page-hero .hero-text { align-items: center; }
+.page-equipe .page-hero .column { align-items: center; }
+.page-equipe .page-hero .hero-text { align-items: center; justify-content: center; width: 100%; }
 .page-equipe #lista-equipe { background: var(--bg-light); }
 .page-equipe #lista-equipe .section-container { padding-top: 96px; padding-bottom: 112px; }
 .team-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-20); }

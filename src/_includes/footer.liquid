@@ -9,14 +9,13 @@
         </div>
         <div class="footer-column footer-contact">
           <span class="footer-label">Fale conosco</span>
-          <a href="{{ 'mailto:' | append: footer.contact.email | url }}" class="link"><i class="iconoir-mail" aria-hidden="true"></i>{{ footer.contact.email }}</a>
-          <a href="{{ '/#agendar' | url }}" class="link">Agende uma consulta</a>
+          {% for item in footer.social %}{% if item.name == "WhatsApp" or item.name == "E-mail" %}<a href="{{ item.url | url }}" class="link"><i class="{{ item.icon }}" aria-hidden="true"></i><span>{{ item.name }}</span></a>{% endif %}{% endfor %}
         </div>
         <div class="footer-column footer-address"><span class="footer-label">Endereço</span><p><i class="iconoir-map-pin" aria-hidden="true"></i>{{ footer.contact.address }}</p></div>
         <div class="footer-column">
           <span class="footer-label">Acompanhe</span>
           <nav class="footer-social">
-            {% for item in footer.social %}<a href="{{ item.url | url }}" rel="noopener" target="_blank" class="link" aria-label="{{ item.name }}"><i class="{{ item.icon }}" aria-hidden="true"></i><span>{{ item.name }}</span></a>{% endfor %}
+            {% for item in footer.social %}{% if item.name == "Instagram" %}<a href="{{ item.url | url }}" rel="noopener" target="_blank" class="link" aria-label="{{ item.name }}"><i class="{{ item.icon }}" aria-hidden="true"></i><span>{{ item.handle }}</span></a>{% endif %}{% endfor %}
           </nav>
         </div>
       </div>
