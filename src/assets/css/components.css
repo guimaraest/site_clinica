@@ -22,6 +22,8 @@
 
 .btn-primary {
     background-color: var(--primary);
+  color: var(--bg-light);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .btn:hover,

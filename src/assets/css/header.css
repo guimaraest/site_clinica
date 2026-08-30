@@ -38,6 +38,9 @@
 }
 
 .btn-nav {
+  background-color: var(--primary);
+  color: var(--bg-light);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
   font-size: var(--text-16);
   font-weight: 500;
   border-radius: var(--radius-small);
