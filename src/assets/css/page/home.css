@@ -20,7 +20,7 @@
 }
 
 .home-hero { background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 12%, var(--bg)) 0%, var(--bg) 60%); }
-.home-hero .section-container { padding-top: clamp(64px, 8vw, 120px); padding-bottom: clamp(64px, 8vw, 120px); }
+.home-hero .section-container { padding-top: calc(clamp(64px, 8vw, 120px) - 20px); padding-bottom: clamp(64px, 8vw, 120px); }
 .home-hero .section-content { align-items: center; }
 .home-hero h1 { max-width: 650px; font-size: clamp(2.6rem, 5vw, 4.5rem); line-height: 1.06; letter-spacing: -.04em; }
 .hero-copy { gap: var(--space-24); }
