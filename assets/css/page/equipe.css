@@ -38,3 +38,17 @@
   color: var(--primary-muted);
   font-weight: 500;
 }
+
+.page-equipe .page-hero .section-content { justify-content: center; text-align: center; }
+.page-equipe .page-hero .hero-text { align-items: center; }
+.page-equipe #lista-equipe { background: var(--bg-light); }
+.page-equipe #lista-equipe .section-container { padding-top: 96px; padding-bottom: 112px; }
+.page-equipe #lista-equipe .card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.page-equipe #lista-equipe .img-card-grid { aspect-ratio: 3 / 4; }
+.professional-profile-image { border-radius: 20px; box-shadow: 0 16px 36px rgba(27, 54, 75, .12); }
+.profile-hero .section-content { align-items: center; }
+.profile-details { background: var(--bg-light); }
+.professional-details-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.professional-details-grid .card { min-height: 180px; justify-content: center; padding: var(--space-24); border-top: 3px solid var(--primary); }
+.professional-details-grid h3 { color: var(--text); font-size: var(--text-18); }
+@media (max-width: 768px) { .page-equipe #lista-equipe .card-grid, .professional-details-grid { grid-template-columns: 1fr; } .page-equipe #lista-equipe .section-container { padding-top: 64px; padding-bottom: 64px; } }

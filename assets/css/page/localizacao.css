@@ -3,3 +3,12 @@
 	border-radius: 12px;
 	overflow: hidden;
 }
+
+.location-hero .section-content { justify-content: center; text-align: center; }
+.location-hero .column { align-items: center; }
+.location-section { background: var(--bg-light); }
+.location-section .section-content { align-items: center; }
+.location-section .column { gap: var(--space-16); }
+.location-label { color: var(--primary-muted); font-size: var(--text-12); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-top: var(--space-8); }
+.location-section .map-embed { width: 100%; margin: 0; }
+.location-section .map-embed iframe { display: block; min-height: 430px; }

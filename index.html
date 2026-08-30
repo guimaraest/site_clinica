@@ -27,6 +27,10 @@
 
   <header class="header" id="siteHeader">
   <div class="header-container">
+    <a class="brand" href="/site_clinica/" aria-label="Concept Belvedere — página inicial">
+      <span class="brand-mark" aria-hidden="true">CB</span>
+      <span class="brand-name">Concept<br>Belvedere</span>
+    </a>
     <div class="nav-wrapper">
       <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="headerNav" aria-label="Abrir menu">
         <span class="menu-open" aria-hidden="true">
@@ -64,8 +68,8 @@
         </ul>
       </nav>
     </div>
-    <div>
-      <a href="example.com" target="_blank" rel="noopener noreferrer" class="btn btn-nav">
+    <div class="header-action">
+      <a href="/#agendar" class="btn btn-nav">
         <span>entre em contato</span>
       </a>
     </div>
@@ -78,11 +82,12 @@
   <main>
     <div class="main-container">
       
-<section class="section hero-section hero-image-background" id="hero" style="--hero-image: url('/site_clinica/assets/images/hero_image.png');">
+<section class="section hero-section home-hero" id="hero">
 	<div class="section-container">
 		<div class="section-content">
 			<div class="column">
-				<div class="hero-text">
+				<div class="hero-text hero-copy">
+					<span class="eyebrow">Odontologia em Belo Horizonte</span>
 					<h1>Seu sorriso merece o melhor cuidado</h1>
 					<p class="subheading">Atendimento odontológico completo, com tecnologia moderna e uma equipe pronta para cuidar de você em cada etapa do tratamento.</p>
 				</div>
@@ -90,18 +95,19 @@
 					<a href="#agendar" target="_blank" rel="noopener noreferrer" class="btn-primary">Agendar Online</a>
 					<a href="https://wa.me/SEUNUMERO" class="btn">WhatsApp</a>
 				</div>
+				<div class="hero-trust"><span><i class="iconoir-shield-check"></i> Atendimento acolhedor</span><span><i class="iconoir-spark"></i> Tecnologia e precisão</span></div>
 			</div>
-      <div class="column hero-image-column" aria-hidden="true"></div>
+      <div class="column home-hero-image"><img src="/site_clinica/assets/images/hero_image.png" alt="Paciente sorrindo durante atendimento odontológico"></div>
 		</div>
 	</div>
 </section>
 
-<section class="section">
+<section class="section services-preview">
   <div class="section-container">
     <div class="section-content">
       <div class="column">
-        <h2 class="center">O que oferecemos</h2>
-        <div class="card-grid">
+        <div class="section-heading"><div><span class="eyebrow">Tratamentos</span><h2>Cuidado pensado para o seu momento</h2></div><a class="text-link" href="/servicos/">Ver todos os serviços <i class="iconoir-arrow-right"></i></a></div>
+        <div class="card-grid services-grid">
           <a href="/servicos/restauracao/" class="center card card-hover img-card-grid">
             <div class="img-card-grid-image"><img src="/site_clinica/assets/images/pexels-cottonbro-6502745.jpg" alt="Restauração (Dor de Dente)"></div>
             <div class="img-card-grid-title">Restauração (Dor de Dente)</div>
@@ -132,12 +138,12 @@
   </div>
 </section>
 
-<section class="section" id="equipe">
+<section class="section team-preview" id="equipe">
   <div class="section-container">
     <div class="section-content">
       <div class="column">
-        <h2 class="center">Quem cuida do seu sorriso</h2>
-        <div class="card-grid">
+        <div class="section-heading"><div><span class="eyebrow">Nossa equipe</span><h2>Gente que cuida de gente</h2></div><a class="text-link" href="/equipe/">Conheça a equipe <i class="iconoir-arrow-right"></i></a></div>
+        <div class="card-grid team-grid">
           <a href="/equipe/dra-cristiana/" class="center card card-hover img-card-grid team-card">
             <div class="img-card-grid-image"><img src="/site_clinica/assets/images/generic_doctor.jpg" alt="Dra. Cristiana"></div>
             <div class="img-card-grid-details">
@@ -174,7 +180,7 @@
   </div>
 </section>
 
-<section class="section" id="localizacao">
+<section class="section location-preview" id="localizacao">
 	<div class="section-container">
 		<div class="section-content">
 			<div class="column">
@@ -190,11 +196,11 @@
 	</div>
 </section>
 
-<section class="section" id="agendar">
+<section class="section appointment-section" id="agendar">
 	<div class="section-container">
 		<div class="section-content">
 			<div class="column">
-				<h2>Agende sua consulta</h2>
+				<span class="eyebrow">Seu próximo passo</span><h2>Agende sua consulta</h2><p class="subheading">Conte o que você precisa. Nós ajudamos a encontrar o melhor caminho.</p>
 				<div class="hero-buttons">
 					<a href="#" target="_blank" rel="noopener noreferrer" class="btn-primary">Agendar Online</a>
 					<a href="https://wa.me/SEUNUMERO" class="btn">WhatsApp</a>
@@ -204,51 +210,32 @@
 		</div>
 	</div>
 </section>
+
     </div>
   </main>
 
   <footer class="footer">
   <div class="section-container footer-container">
     <div class="footer-content">
-      <div class="footer-row footer-name">
-        <p>
-          concept belvedere
-        </p>
-      </div>
-    
-      <div class="footer-column">
-        <div class="footer-row">
+      <div class="footer-row footer-main">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">CB</span>
+          <p>Concept Belvedere</p>
+          <span>Odontologia com cuidado em cada detalhe.</span>
+        </div>
+        <div class="footer-column footer-contact">
+          <span class="footer-label">Fale conosco</span>
+          <a href="mailto:hello@lavie.com" class="link">hello@lavie.com</a>
+          <a href="/#agendar" class="link">Agende uma consulta</a>
+        </div>
+        <div class="footer-column">
+          <span class="footer-label">Acompanhe</span>
           <nav class="footer-social">
-            
-              <a href="https://x.com/lavie" rel="noopener" target="_blank" class="link">
-                X
-              </a>
-            
-              <a href="https://linkedin.com/company/lavie" rel="noopener" target="_blank" class="link">
-                LinkedIn
-              </a>
-            
-              <a href="https://github.com/lavie" rel="noopener" target="_blank" class="link">
-                GitHub
-              </a>
-            
+            <a href="https://x.com/lavie" rel="noopener" target="_blank" class="link">X</a><a href="https://linkedin.com/company/lavie" rel="noopener" target="_blank" class="link">LinkedIn</a><a href="https://github.com/lavie" rel="noopener" target="_blank" class="link">GitHub</a>
           </nav>
         </div>
-      
-        <div class="footer-row">
-          <div class="footer-contact">
-            <a href="mailto:hello@lavie.com" class="link">
-              hello@lavie.com
-            </a>
-          </div>
-        
-          <div class="footer-meta">
-            <small>
-              © 2026 concept belvedere
-            </small>
-          </div>
-        </div>
       </div>
+      <div class="footer-row footer-bottom"><small>© 2026 concept belvedere</small><small>Todos os direitos reservados.</small></div>
     </div>
   </div>
 </footer>

@@ -232,3 +232,59 @@
   }
 
 }
+
+/* Polished shared component layer */
+.eyebrow {
+  color: var(--primary-muted);
+  font-size: var(--text-14);
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.section-heading { display: flex; align-items: end; justify-content: space-between; gap: var(--space-24); }
+.section-heading > div { display: grid; gap: var(--space-12); max-width: 720px; }
+.text-link { display: inline-flex; width: fit-content; align-items: center; gap: var(--space-8); color: var(--primary-muted); font-size: var(--text-16); font-weight: 700; white-space: nowrap; }
+.text-link i, .service-card-link i, .team-card-link i { font-size: 1.1em; transition: transform .2s ease; }
+.text-link:hover i, .service-card:hover i, .team-card:hover i { transform: translateX(4px); }
+
+.btn, .btn-primary { min-width: 0; min-height: 52px; padding: 0 var(--space-24); border-radius: 999px; box-shadow: none; border: 1px solid color-mix(in srgb, var(--text) 14%, transparent); }
+.btn-primary { border-color: var(--primary); text-shadow: none; }
+.btn:hover, .btn:focus-visible, .btn-primary:hover, .btn-primary:focus-visible { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(32, 109, 177, .16); }
+
+.card { border-radius: 16px; box-shadow: 0 1px 0 rgba(0,0,0,.06), 0 12px 28px rgba(27, 54, 75, .06); }
+.card-hover:hover, .card-hover:focus-visible { transform: translateY(-5px); box-shadow: 0 18px 32px rgba(27, 54, 75, .12); }
+.card-grid { gap: var(--space-20); }
+.img-card-grid { aspect-ratio: 4 / 5; padding: var(--space-24); overflow: hidden; }
+.img-card-grid::before { background: linear-gradient(180deg, rgba(8, 23, 35, .05) 15%, rgba(8, 23, 35, .78) 100%); }
+.img-card-grid-image img { transition: transform .45s ease; }
+.img-card-grid:hover .img-card-grid-image img { transform: scale(1.05); }
+.img-card-grid-title { font-size: var(--text-24); font-weight: 700; text-align: left; }
+
+.service-card-content, .team-card-content { display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; width: 100%; height: 100%; text-align: left; gap: var(--space-12); }
+.service-card-number, .team-card-role { color: rgba(255,255,255,.8); font-size: var(--text-12); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.service-card-link, .team-card-link { display: inline-flex; align-items: center; gap: var(--space-8); color: var(--bg-light); font-size: var(--text-14); font-weight: 700; }
+.team-card { aspect-ratio: 3 / 4; }
+.team-card-name { color: var(--bg-light); font-size: var(--text-24); font-weight: 700; }
+.team-card-experience { color: rgba(255,255,255,.82); font-size: var(--text-14); }
+
+.page-hero { background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 10%, var(--bg)) 0%, var(--bg) 55%); }
+.page-hero .section-container { padding-top: clamp(72px, 10vw, 144px); padding-bottom: clamp(72px, 10vw, 144px); }
+.page-hero .hero-text { gap: var(--space-16); max-width: 760px; }
+.map-embed { overflow: hidden; border-radius: 16px; box-shadow: 0 12px 32px rgba(27, 54, 75, .1); }
+
+.appointment-section .section-container { padding-top: 96px; padding-bottom: 96px; }
+.appointment-section .section-content { max-width: 920px; margin: 0 auto; text-align: center; }
+.appointment-section .column { align-items: center; gap: var(--space-20); }
+.appointment-section { background: var(--primary); }
+.appointment-section .eyebrow, .appointment-section h2, .appointment-section p, .appointment-section .text-link { color: var(--bg-light); }
+.appointment-section .btn-primary { background: var(--bg-light); border-color: var(--bg-light); color: var(--primary-muted); }
+.appointment-section .btn { background: transparent; border-color: rgba(255,255,255,.58); color: var(--bg-light); }
+
+@media (max-width: 768px) {
+  .section-heading { align-items: flex-start; flex-direction: column; }
+  .section-heading .text-link { white-space: normal; }
+  .img-card-grid { aspect-ratio: 1 / 1; }
+  .team-card { aspect-ratio: 4 / 5; }
+  .appointment-section .section-container { padding-top: 64px; padding-bottom: 64px; }
+}

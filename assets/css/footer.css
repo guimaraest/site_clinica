@@ -15,6 +15,19 @@
     z-index: 1;
 }
 
+.footer { height: auto; position: relative; background: hsl(207, 20%, 12%); color: var(--bg-light); }
+.footer-container { padding-top: 64px; padding-bottom: var(--space-24); }
+.footer-content { gap: var(--space-48); }
+.footer-main { align-items: flex-start; gap: var(--space-48); }
+.footer-brand { display: grid; gap: var(--space-12); max-width: 290px; }
+.footer-brand p { color: var(--bg-light); font-size: var(--text-24); font-weight: 700; }
+.footer-brand > span:last-child, .footer-column .link, .footer-bottom small { color: rgba(255,255,255,.72); }
+.footer-label { color: var(--bg-light); font-size: var(--text-12); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.footer-column { gap: var(--space-12); min-width: 150px; }
+.footer-social { flex-direction: column; gap: var(--space-8); }
+.footer .link { width: fit-content; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.16); padding-top: var(--space-20); }
+
 .footer-container {
     padding: var(--space-48) var(--section-padding-horizontal) var(--space-24) var(--section-padding-horizontal);
 }
