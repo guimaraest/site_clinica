@@ -25,6 +25,11 @@
 .footer-label { color: var(--bg-light); font-size: var(--text-12); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .footer-column { gap: var(--space-12); min-width: 150px; }
 .footer-social { flex-direction: column; gap: var(--space-8); }
+.footer-social .link, .footer-contact .link, .footer-address p { display: inline-flex; align-items: flex-start; gap: var(--space-8); }
+.footer-social .link span { display: none; }
+.footer-social .link i { color: var(--bg-light); font-size: var(--text-20); }
+.footer-address p { color: rgba(255,255,255,.72); font-size: var(--text-14); max-width: 230px; }
+.footer-address p i { color: var(--bg-light); flex: 0 0 auto; font-size: var(--text-18); }
 .footer .link { width: fit-content; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.16); padding-top: var(--space-20); }
 

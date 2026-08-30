@@ -3,20 +3,24 @@
     "name": "concept belvedere"
   },
   "contact": {
-    "email": "hello@lavie.com"
+    "email": "hello@lavie.com",
+    "address": "Rua Exemplo, 123 — Bairro, Belo Horizonte/MG"
   },
   "social": [
     {
-      "name": "X",
-      "url": "https://x.com/lavie"
+      "name": "WhatsApp",
+      "icon": "iconoir-whatsapp",
+      "url": "https://wa.me/SEUNUMERO"
     },
     {
-      "name": "LinkedIn",
-      "url": "https://linkedin.com/company/lavie"
+      "name": "Instagram",
+      "icon": "iconoir-instagram",
+      "url": "https://instagram.com/SEU_PERFIL"
     },
     {
-      "name": "GitHub",
-      "url": "https://github.com/lavie"
+      "name": "E-mail",
+      "icon": "iconoir-mail",
+      "url": "mailto:hello@lavie.com"
     }
   ],
   "copyright": {
