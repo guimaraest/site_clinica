@@ -14,9 +14,7 @@ stylesheet: /css/page/home.css
 					<h1>Seu sorriso merece o melhor cuidado</h1>
 					<p class="subheading">Atendimento odontológico completo, com tecnologia moderna e uma equipe pronta para cuidar de você em cada etapa do tratamento.</p>
 				</div>
-				<div class="hero-buttons">
-					<a href="{{ nav.button.url | url }}" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="iconoir-whatsapp" aria-hidden="true"></i>{{ nav.button.title }}</a>
-				</div>
+				{% include "cta/whatsapp-primary.liquid" %}
 				<div class="hero-trust"><span><i class="iconoir-shield-check"></i> Atendimento acolhedor</span><span><i class="iconoir-spark"></i> Tecnologia e precisão</span></div>
 			</div>
       <div class="column home-hero-image"><img src="{{ '/assets/images/hero_image.png' | url }}" alt="Paciente sorrindo durante atendimento odontológico"></div>
@@ -96,9 +94,7 @@ stylesheet: /css/page/home.css
 		<div class="section-content">
 			<div class="column">
 				<span class="kicker">Seu próximo passo</span><h2>Agende sua consulta</h2><p class="subheading">Conte o que você precisa. Nós ajudamos a encontrar o melhor caminho.</p>
-				<div class="hero-buttons">
-					{% include "cta/whatsapp-primary.liquid" %}
-				</div>
+				{% include "cta/whatsapp-primary.liquid" %}
 				{% include "cta/whatsapp-link.liquid" %}
 			</div>
 		</div>
