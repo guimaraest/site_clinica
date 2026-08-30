@@ -5,7 +5,7 @@ title: Equipe | Clínica Odontológica
 stylesheet: /css/page/equipe.css
 ---
 
-<section class="section hero-section hero-gradient" id="hero">
+<section class="section page-hero" id="hero">
 	<div class="section-container">
 		<div class="section-content">
 			<div class="column">
@@ -27,11 +27,7 @@ stylesheet: /css/page/equipe.css
           {% for profissional in equipe %}
           <a href="{{ profissional.slug | prepend: '/equipe/' | append: '/' | url }}" class="center card card-hover img-card-grid">
             <div class="img-card-grid-image"><img src="{{ profissional.image | url }}" alt="{{ profissional.alt }}"></div>
-            <div class="img-card-grid-details">
-              <div class="img-card-grid-title">{{ profissional.name }}</div>
-              <div class="img-card-grid-description">{{ profissional.specialization }}</div>
-              <div class="img-card-grid-description">{{ profissional.experience }}</div>
-            </div>
+            <div class="team-card-content"><span class="team-card-role">{{ profissional.specialization }}</span><div><div class="team-card-name">{{ profissional.name }}</div><span class="team-card-experience">{{ profissional.experience }}</span></div><span class="team-card-link">Conheça o profissional <i class="iconoir-arrow-right"></i></span></div>
           </a>
           {% endfor %}
         </div>

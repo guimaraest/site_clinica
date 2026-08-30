@@ -1,5 +1,9 @@
 <header class="header" id="siteHeader">
   <div class="header-container">
+    <a class="brand" href="{{ '/' | url }}" aria-label="Concept Belvedere — página inicial">
+      <span class="brand-mark" aria-hidden="true">CB</span>
+      <span class="brand-name">Concept<br>Belvedere</span>
+    </a>
     <div class="nav-wrapper">
       <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="headerNav" aria-label="Abrir menu">
         <span class="menu-open" aria-hidden="true">
@@ -19,8 +23,8 @@
         </ul>
       </nav>
     </div>
-    <div>
-      <a href="{{ nav.button.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-nav">
+    <div class="header-action">
+      <a href="/#agendar" class="btn btn-nav">
         <span>{{ nav.button.title }}</span>
       </a>
     </div>
