@@ -104,6 +104,7 @@
   overflow: hidden;
   isolation: isolate;
   color: var(--bg-light);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .img-card-grid-image {
@@ -124,17 +125,14 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.78),
-    rgba(0, 0, 0, 0.12)
-  );
+  background: rgba(0, 0, 0, 0.45);
   content: "";
 }
 
 .img-card-grid-title {
   position: relative;
   z-index: 1;
+  color: var(--bg-light);
   font-size: var(--text-18);
   font-weight: 500;
   text-align: center;
@@ -151,6 +149,7 @@
 }
 
 .img-card-grid-description {
+  color: var(--bg-light);
   font-size: var(--text-14);
   font-weight: 400;
   text-align: center;
@@ -165,12 +164,12 @@
 }
 
 .team-card .img-card-grid-title {
-  color: var(--text);
+  color: var(--bg-light);
   font-weight: 700;
 }
 
 .team-card .img-card-grid-description {
-  color: var(--text-muted);
+  color: var(--bg-light);
 }
 
 .team-card-muted-content {
