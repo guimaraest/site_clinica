@@ -396,6 +396,11 @@ hr {
     justify-content: flex-start;
     gap: var(--space-24);
     align-items: stretch;
+    height: auto;
+  }
+
+  .section-content > .column {
+    flex: 0 1 auto;
   }
 
   .link {
