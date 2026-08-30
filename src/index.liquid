@@ -67,22 +67,19 @@ stylesheet: /css/page/home.css
     <div class="section-content">
       <div class="column">
         <h2 class="center">Quem cuida do seu sorriso</h2>
-        <div class="integration-list">
-          <div class="center card card-hover">
-            <div class="center integration-icon"><i class="iconoir-user"></i></div>
-            <span class="center">Dra. Fulana de Tal</span>
-            <p class="topleft">Ortodontia — CRO 00000</p>
-          </div>
-          <div class="center card card-hover">
-            <div class="center integration-icon"><i class="iconoir-user"></i></div>
-            <span class="center">Dr. Fulano de Tal</span>
-            <p class="topleft">Implantodontia — CRO 00000</p>
-          </div>
-          <div class="center card card-hover">
-            <div class="center integration-icon"><i class="iconoir-user"></i></div>
-            <span class="center">Dra. Fulana de Tal</span>
-            <p class="topleft">Odontopediatria — CRO 00000</p>
-          </div>
+        <div class="row">
+          <a href="/servicos/restauracao/" class="center card card-hover service-card">
+            <img src="{{ '/assets/images/generic_doctor.jpg' | url }}" alt="Restauração (Dor de Dente)">
+            <span class="center">Dra. Cristiana</span>
+          </a>
+          <a href="/servicos/clareamento/" class="center card card-hover service-card">
+            <img src="{{ '/assets/images/generic_doctor.jpg' | url }}" alt="Clareamento">
+            <span class="center">Dr. Vinicius</span>
+          </a>
+          <a href="/servicos/aparelho/" class="center card card-hover service-card">
+            <img src="{{ '/assets/images/generic_doctor.jpg' | url }}" alt="Aparelhos (Ortodontia)">
+            <span class="center">Dr. Cássio</span>
+          </a>
         </div>
       </div>
     </div>
