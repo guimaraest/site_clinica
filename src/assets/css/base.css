@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6, p, small {
 
 *::-webkit-scrollbar-thumb {
   background-color: var(--bg-light);
-  border-radius: 999px;
+  border-radius: var(--radius-small);
   box-shadow: var(--shadow);
 }
 
@@ -438,5 +438,4 @@ hr {
     font-size: var(--text-12);
   }
 }
-
 

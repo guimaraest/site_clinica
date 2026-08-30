@@ -23,12 +23,15 @@ stylesheet: /css/page/equipe.css
     <div class="section-content">
       <div class="column integration-column">
         <h2 class="center">Nossos profissionais</h2>
-        <div class="card-grid">
+        <div class="team-list">
           {% for profissional in equipe %}
-          <a href="{{ profissional.slug | prepend: '/equipe/' | append: '/' | url }}" class="center card card-hover img-card-grid">
-            <div class="img-card-grid-image"><img src="{{ profissional.image | url }}" alt="{{ profissional.alt }}"></div>
-            <div class="team-card-content"><span class="team-card-role">{{ profissional.specialization }}</span><div><div class="team-card-name">{{ profissional.name }}</div><span class="team-card-experience">{{ profissional.experience }}</span></div><span class="team-card-link">Conheça o profissional <i class="iconoir-arrow-right"></i></span></div>
-          </a>
+          <article class="team-entry">
+            <a href="{{ profissional.slug | prepend: '/equipe/' | append: '/' | url }}" class="team-card card card-hover img-card-grid">
+              <div class="img-card-grid-image"><img src="{{ profissional.image | url }}" alt="{{ profissional.alt }}"></div>
+              <div class="team-card-content"><div class="team-card-name">{{ profissional.name }}</div><span class="team-card-role">{{ profissional.specialization }}</span></div>
+            </a>
+            <div class="team-card-meta"><span>{{ profissional.experience }}</span><a href="{{ profissional.slug | prepend: '/equipe/' | append: '/' | url }}" class="text-link">Ver perfil <i class="iconoir-arrow-right"></i></a></div>
+          </article>
           {% endfor %}
         </div>
       </div>
