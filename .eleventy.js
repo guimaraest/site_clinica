@@ -1,9 +1,8 @@
 console.log(process.env.NODE_ENV);
-const isProd = process.env.NODE_ENV === "production";
+const config = require("./config.js");
 const imageModule = import("@11ty/eleventy-img");
 const buildPre = require("./build_pre.js");
 const buildPost = require("./build_post.js");
-const WEBP_QUALITY = 80;
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/robots.txt");
@@ -16,20 +15,20 @@ module.exports = function (eleventyConfig) {
     await buildPost();
   });
 
-  eleventyConfig.addLiquidShortcode("image", async function (source, alt, sizes = "100vw", className = "") {
+  eleventyConfig.addLiquidShortcode("image", async function (source, alt, sizes = config.IMAGE_DEFAULT_SIZES, className = "") {
     const { default: Image, generateHTML } = await imageModule;
     const metadata = await Image(source, {
-      widths: [320, 640, 960, 1280, 1600],
-      formats: ["webp"],
-      outputDir: "_site/assets/images/",
-      urlPath: "/assets/images/",
-      sharpOptions: { quality: WEBP_QUALITY }
+      widths: config.IMAGE_WIDTHS,
+      formats: config.IMAGE_FORMATS,
+      outputDir: config.IMAGE_OUTPUT_DIR,
+      urlPath: config.IMAGE_URL_PATH,
+      sharpOptions: { quality: config.WEBP_QUALITY }
     });
     return generateHTML(metadata, {
       alt,
       sizes,
-      loading: "lazy",
-      decoding: "async",
+      loading: config.IMAGE_LOADING,
+      decoding: config.IMAGE_DECODING,
       class: className
     });
   });
@@ -48,6 +47,6 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
       data: "_data"
     },
-    pathPrefix: isProd ? "/site_clinica/" : "/"
+    pathPrefix: config.PATH_PREFIX
   };
 };
