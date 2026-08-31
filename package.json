@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_ENV=development eleventy --serve",
+    "dev": "NODE_ENV=production eleventy --serve",
     "build": "NODE_ENV=production eleventy",
-    "deploy": "NODE_ENV=production eleventy && gh-pages -d _site"
+    "deploy": "npm run build && gh-pages -d _site"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,8 @@
     "@11ty/eleventy": "^3.1.2"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "esbuild": "^0.28.2",
+    "gh-pages": "^6.3.0",
+    "sharp": "^0.35.4"
   }
 }
