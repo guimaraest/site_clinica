@@ -20,6 +20,9 @@
     "url": "https://github.com/guimaraest/solaritus-site/issues"
   },
   "homepage": "https://github.com/guimaraest/solaritus-site#readme",
+  "engines": {
+    "node": ">=22"
+  },
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-img": "^7.0.0"

@@ -1,6 +1,6 @@
 console.log(process.env.NODE_ENV);
 const isProd = process.env.NODE_ENV === "production";
-const Image = require("@11ty/eleventy-img");
+const imageModule = import("@11ty/eleventy-img");
 const buildPre = require("./build_pre.js");
 const buildPost = require("./build_post.js");
 const WEBP_QUALITY = 80;
@@ -17,6 +17,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addLiquidShortcode("image", async function (source, alt, sizes = "100vw", className = "") {
+    const { default: Image, generateHTML } = await imageModule;
     const metadata = await Image(source, {
       widths: [320, 640, 960, 1280, 1600],
       formats: ["webp"],
@@ -24,7 +25,7 @@ module.exports = function (eleventyConfig) {
       urlPath: "/assets/images/",
       sharpOptions: { quality: WEBP_QUALITY }
     });
-    return Image.generateHTML(metadata, {
+    return generateHTML(metadata, {
       alt,
       sizes,
       loading: "lazy",
