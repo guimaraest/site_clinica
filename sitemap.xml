@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url><loc>https://example.com/localizacao/</loc></url>
+
+  <url><loc>https://example.com/equipe/</loc></url>
+
+  <url><loc>https://example.com/servicos/</loc></url>
+
+  <url><loc>https://example.com/equipe/dra-cristiana/</loc></url>
+
+  <url><loc>https://example.com/</loc></url>
+
+  <url><loc>https://example.com/servicos/aparelho/</loc></url>
+
+  <url><loc>https://example.com/servicos/clareamento/</loc></url>
+
+  <url><loc>https://example.com/servicos/estetica/</loc></url>
+
+  <url><loc>https://example.com/servicos/implante/</loc></url>
+
+  <url><loc>https://example.com/servicos/protese/</loc></url>
+
+  <url><loc>https://example.com/servicos/restauracao/</loc></url>
+
+</urlset>
