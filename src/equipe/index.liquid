@@ -27,7 +27,7 @@ stylesheet: /css/page/equipe.css
           {% for profissional in equipe %}
           <article class="team-entry">
             <a href="{{ profissional.slug | prepend: '/equipe/' | append: '/' | url }}" class="team-card card card-hover img-card-grid">
-              <div class="img-card-grid-image"><img src="{{ profissional.image | url }}" alt="{{ profissional.alt }}"></div>
+              <div class="img-card-grid-image">{% image profissional.image, profissional.alt, "(max-width: 700px) 50vw, 25vw" %}</div>
               <div class="team-card-content"><div class="team-card-name">{{ profissional.name }}</div><span class="team-card-role">{{ profissional.specialization }}</span></div>
             </a>
             <div class="team-card-meta"><span>{{ profissional.experience }}</span><a href="{{ profissional.slug | prepend: '/equipe/' | append: '/' | url }}" class="text-link">Ver perfil <i class="iconoir-arrow-right"></i></a></div>

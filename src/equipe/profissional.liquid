@@ -21,7 +21,7 @@ title: "{{ profissional.name }} | Clínica Odontológica"
 			</div>
 			<div class="column">
 				<div class="professional-profile-image">
-					<img src="{{ profissional.image | url }}" alt="{{ profissional.alt }}">
+					{% image profissional.image, profissional.alt, "(max-width: 700px) 90vw, 50vw" %}
 				</div>
 			</div>
 		</div>

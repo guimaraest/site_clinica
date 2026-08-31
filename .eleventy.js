@@ -1,18 +1,36 @@
 console.log(process.env.NODE_ENV);
 const isProd = process.env.NODE_ENV === "production";
-const buildAssets = require("./build.js");
+const Image = require("@11ty/eleventy-img");
+const buildPre = require("./build_pre.js");
+const buildPost = require("./build_post.js");
+const WEBP_QUALITY = 80;
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
+
   eleventyConfig.on("eleventy.before", async () => {
-    await buildAssets();
+    await buildPre();
   });
 
-  eleventyConfig.addTransform("optimizedImageUrls", function (content, outputPath) {
-    if (!outputPath || !outputPath.endsWith(".html")) return content;
-    return content.replace(
-      /\/assets\/images\/([^"')?]+)\.(avif|bmp|gif|jpe?g|png|tiff?)\b/gi,
-      "/assets/images/$1.webp"
-    );
+  eleventyConfig.on("eleventy.after", async () => {
+    await buildPost();
+  });
+
+  eleventyConfig.addLiquidShortcode("image", async function (source, alt, sizes = "100vw", className = "") {
+    const metadata = await Image(source, {
+      widths: [320, 640, 960, 1280, 1600],
+      formats: ["webp"],
+      outputDir: "_site/assets/images/",
+      urlPath: "/assets/images/",
+      sharpOptions: { quality: WEBP_QUALITY }
+    });
+    return Image.generateHTML(metadata, {
+      alt,
+      sizes,
+      loading: "lazy",
+      decoding: "async",
+      class: className
+    });
   });
 
   eleventyConfig.addTransform("envComment", function (content, outputPath) {
