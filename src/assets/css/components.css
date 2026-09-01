@@ -21,9 +21,10 @@
 }
 
 .btn-primary {
-    background-color: var(--primary);
+  background-color: var(--primary);
   color: var(--bg-light);
   text-shadow: var(--text-shadow-sm);
+  gap: var(--space-4);
 }
 
 @media (hover: hover) and (pointer: fine) {
