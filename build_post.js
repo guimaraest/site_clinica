@@ -66,7 +66,10 @@ async function processHtml(replacements) {
     }
     contents = await critters.process(contents);
     if (config.PATH_PREFIX !== "/") {
-      contents = contents.replace(/(href|src)="\/assets\//g, `$1="${config.PATH_PREFIX}assets/`);
+      contents = contents.replace(/(srcset|src|href)="([^"#?]+)"/g, (match, attribute, value) => {
+        if (!value.startsWith("/assets/")) return match;
+        return `${attribute}="${value.replace(/\/assets\//g, `${config.PATH_PREFIX}assets/`)}"`;
+      });
     }
     contents = await minify(contents, config.HTML_MINIFY_OPTIONS);
     await fs.writeFile(file, contents, config.UTF8);

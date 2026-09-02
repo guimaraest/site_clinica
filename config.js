@@ -23,7 +23,7 @@ module.exports = {
   IMAGE_WIDTHS: [320, 640, 960, 1280, 1600],
   IMAGE_FORMATS: ["webp"],
   WEBP_QUALITY: 90,
-  IMAGE_URL_PATH: "/assets/images/",
+  IMAGE_URL_PATH: IS_PRODUCTION ? "/site_clinica/assets/images/" : "/assets/images/",
   IMAGE_OUTPUT_DIR: "_site/assets/images/",
   IMAGE_DEFAULT_SIZES: "100vw",
   IMAGE_LOADING: "lazy",
