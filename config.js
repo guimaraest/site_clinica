@@ -36,7 +36,7 @@ module.exports = {
   PATH_PREFIX: IS_PRODUCTION ? "/site_clinica/" : "/",
   CRITTERS_OPTIONS: {
     path: path.join(ROOT_DIR, "_site"),
-    publicPath: "/",
+    publicPath: IS_PRODUCTION ? "/site_clinica/" : "/",
     inlineFonts: false,
     preload: "swap",
     pruneSource: false

@@ -64,10 +64,7 @@ async function processHtml(replacements) {
         contents = contents.split(prefixedOldReference).join(prefixedNewReference);
       }
     }
-    const criticalInput = config.PATH_PREFIX === config.DEVELOPMENT_PATH_PREFIX
-      ? contents
-      : contents.split(config.PATH_PREFIX).join("/");
-    contents = await critters.process(criticalInput);
+    contents = await critters.process(contents);
     if (config.PATH_PREFIX !== "/") {
       contents = contents.replace(/(href|src)="\/assets\//g, `$1="${config.PATH_PREFIX}assets/`);
     }
