@@ -2,6 +2,7 @@ const fs = require("fs/promises");
 const path = require("path");
 const esbuild = require("esbuild");
 const config = require("./config.js");
+const generateData = require("./tools/generate-data.js");
 
 async function filesIn(directory) {
   const entries = await fs.readdir(directory, { withFileTypes: true });
@@ -55,6 +56,7 @@ async function minifyScripts() {
 }
 
 async function buildPre() {
+  generateData();
   await fs.rm(config.OUTPUT_ASSETS_DIR, { recursive: true, force: true });
   await fs.cp(config.SOURCE_ASSETS_DIR, config.OUTPUT_ASSETS_DIR, { recursive: true });
   await Promise.all([minifyStyles(), minifyScripts()]);
