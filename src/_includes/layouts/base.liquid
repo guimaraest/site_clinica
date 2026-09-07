@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}</title>
-  <meta name="description" content="{{ description | default: site.description }}">
+  <title>{% if title %}{{ title }} · {{ clinic.name }}{% else %}{{ clinic.name }}{% endif %}</title>
+  <meta name="description" content="{{ description | default: clinic.description }}">
 
   <link rel="stylesheet" href="{{ 'https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css' | url }}" />
 

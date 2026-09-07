@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-{% if site.url %}Sitemap: {{ site.url }}/sitemap.xml{% endif %}
+Sitemap: {{ clinic.url }}/sitemap.xml

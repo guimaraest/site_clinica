@@ -1,0 +1,26 @@
+{
+  "name": "Concept Belvedere",
+  "description": "Clínica odontológica no Belvedere, em Belo Horizonte, com atendimento completo para cuidar do seu sorriso.",
+  "url": "https://example.com",
+  "contact": {
+    "email": "hello@lavie.com",
+    "phone": "SEUNUMERO",
+    "whatsapp": "https://wa.me/SEUNUMERO"
+  },
+  "location": {
+    "address": "Rua Exemplo, 123 — Bairro, Belo Horizonte/MG",
+    "hours": "Seg a Sex: 8h às 18h | Sáb: 8h às 12h",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=SEU_EMBED",
+    "mapsUrl": "https://maps.google.com/?q=SEU_ENDERECO"
+  },
+  "social": {
+    "instagram": {
+      "handle": "@conceptbelvedere",
+      "url": "https://instagram.com/SEU_PERFIL"
+    }
+  },
+  "copyright": {
+    "holder": "concept belvedere",
+    "year": 2026
+  }
+}

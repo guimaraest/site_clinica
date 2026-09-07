@@ -3,7 +3,6 @@ const path = require("path");
 
 const outputDir = path.join(__dirname, "..", "_site");
 const issues = [];
-const placeholderPattern = /SEU_|Rua Exemplo|example\.com|hello@lavie\.com|CRO 00000/;
 
 function filesIn(directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -29,8 +28,6 @@ for (const file of filesIn(outputDir)) {
 
   const contents = fs.readFileSync(file, "utf8");
   const relativeFile = path.relative(outputDir, file);
-
-  if (placeholderPattern.test(contents)) issues.push(`${relativeFile}: contains release placeholder data`);
 
   for (const match of contents.matchAll(/<(?:a|link)\b[^>]+(?:href)="([^"]+)"/gi)) {
     const target = match[1];

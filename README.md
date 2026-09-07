@@ -15,4 +15,4 @@ O servidor de desenvolvimento usa `NODE_ENV=development`. Para gerar a versão d
 npm run build
 ```
 
-Antes da publicação, preencha os dados de contato, mapa, redes sociais e registros profissionais em `src/_data/` e remova todos os valores `SEU_`. O comando `npm test` gera o site e verifica esses requisitos.
+Antes da publicação, preencha os dados de contato, mapa, redes sociais e endereço em `src/_data/clinic.json`. Os dados da equipe permanecem em `src/_data/equipe.json`. O comando `npm test` gera o site e verifica a estrutura dos links e elementos incorporados.
