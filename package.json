@@ -1,25 +1,17 @@
 {
   "name": "site-clinica",
   "version": "1.0.0",
-  "description": "© 2026 Thiago Guimarães. All rights reserved.",
+  "description": "Website da clínica odontológica Concept Belvedere",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run build && node tools/validate-build.js",
     "dev": "NODE_ENV=development eleventy --serve",
     "build": "NODE_ENV=production eleventy",
     "deploy": "npm run build && gh-pages -d _site"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/guimaraest/solaritus-site.git"
-  },
-  "keywords": [],
+  "keywords": ["odontologia", "clinica"],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/guimaraest/solaritus-site/issues"
-  },
-  "homepage": "https://github.com/guimaraest/solaritus-site#readme",
   "engines": {
     "node": ">=22"
   },

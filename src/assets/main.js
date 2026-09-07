@@ -6,6 +6,9 @@ class HamburgerMenu extends HTMLElement {
     
     this.isOpen = false;
 
+    this.mobileQuery = window.matchMedia('(max-width: 768px)');
+    this.syncState();
+
     this.menuButton.addEventListener('click', () => {
       this.toggle();
     });
@@ -15,31 +18,35 @@ class HamburgerMenu extends HTMLElement {
         this.close();
       }
     });
+
+    this.mobileQuery.addEventListener('change', () => {
+      this.isOpen = false;
+      this.syncState();
+    });
+
+    this.nav.addEventListener('click', (e) => {
+      if (e.target.closest('a') && this.mobileQuery.matches) this.close();
+    });
+  }
+
+  syncState() {
+    const isHidden = this.mobileQuery.matches && !this.isOpen;
+    this.menuButton.setAttribute('aria-expanded', String(this.isOpen));
+    this.menuButton.setAttribute('aria-label', this.isOpen ? 'Fechar menu' : 'Abrir menu');
+    this.nav.setAttribute('aria-hidden', String(isHidden));
+    this.header.classList.toggle('open', this.isOpen);
+    this.menuButton.classList.toggle('open', this.isOpen);
+    document.documentElement.style.overflow = this.isOpen ? 'hidden' : '';
   }
 
   toggle() {
     this.isOpen = !this.isOpen;
-
-    this.menuButton.setAttribute('aria-expanded', String(this.isOpen));
-    this.nav.setAttribute('aria-hidden', String(!this.isOpen));
-
-    this.header.classList.toggle('open', this.isOpen);
-    this.menuButton.classList.toggle('open', this.isOpen);
-
-    if (this.isOpen) {
-        document.documentElement.style.overflow = 'hidden';
-    } else {
-        document.documentElement.style.overflow = '';
-    }
+    this.syncState();
   }
 
   close () {
     this.isOpen = false;
-    this.menuButton.setAttribute('aria-expanded', 'false');
-    this.nav.setAttribute('aria-hidden', 'true');
-    this.header.classList.remove('open');
-    this.menuButton.classList.remove('open');
-    document.documentElement.style.overflow = '';
+    this.syncState();
     this.menuButton.focus();
   }
 }

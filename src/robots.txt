@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+{% if site.url %}Sitemap: {{ site.url }}/sitemap.xml{% endif %}
