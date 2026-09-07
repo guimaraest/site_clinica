@@ -36,9 +36,7 @@ function sourceRoutes(directory, relativeDirectory = "") {
 
 module.exports = function generateData() {
   const routes = [...new Set(sourceRoutes(sourceDir))];
-  const highLevelRoutes = routes
-    .filter((route) => route === "/" || route.split("/").filter(Boolean).length === 1)
-    .filter((route) => labels[route]);
+  const highLevelRoutes = Object.keys(labels).filter((route) => routes.includes(route));
 
   const nav = {
     nav: highLevelRoutes.map((url) => ({ title: labels[url], url })),

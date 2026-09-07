@@ -1,40 +1,12 @@
 {
-  "nav":
-  [
+  "nav": [
     {
       "title": "home",
       "url": "/"
     },
     {
       "title": "serviços",
-      "url": "/servicos/",
-      "children":
-      [
-        {
-          "title": "dor de dente e carie (restauração)",
-          "url": "/servicos/restauracao/"
-        },
-        {
-          "title": "extração (implante)",
-          "url": "/servicos/implante/"
-        },
-        {
-          "title": "aparelho (ortodontia)",
-          "url": "/servicos/aparelho/"
-        },
-        {
-          "title": "prótese",
-          "url": "/servicos/protese/"
-        },
-        {
-          "title": "clareamento",
-          "url": "/servicos/clareamento/"
-        },
-        {
-          "title": "estetica (harmonização)",
-          "url": "/servicos/estetica/"
-        }
-      ]
+      "url": "/servicos/"
     },
     {
       "title": "localização",
@@ -42,22 +14,11 @@
     },
     {
       "title": "nossa equipe",
-      "url": "/equipe/",
-      "children":
-      [
-        {
-          "title": "Dra. Cristiana Maria",
-          "url": "/equipe/dra-cristiana/"
-        },
-        {
-          "title": "Dr. Vinicius",
-          "url": "/equipe/dr-vinicius/"
-        },
-        {
-          "title": "Dr. Cássio",
-          "url": "/equipe/dr-cassio/"
-        }
-      ]
+      "url": "/equipe/"
     }
-  ]
+  ],
+  "button": {
+    "title": "WhatsApp",
+    "url": "https://wa.me/SEUNUMERO"
+  }
 }
