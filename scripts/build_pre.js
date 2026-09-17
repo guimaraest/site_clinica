@@ -56,9 +56,6 @@ async function minifyScripts() {
 }
 
 async function buildPre() {
-  // #region agent log
-  await fs.appendFile("/home/thiago/Files/Projects/Clinica/site_clinica/.cursor/debug-3e885f.log", JSON.stringify({ sessionId: "3e885f", runId: "pre-fix", hypothesisId: "E", location: "build_pre.js:buildPre:entry", message: "buildPre start", data: { nodeEnv: process.env.NODE_ENV }, timestamp: Date.now() }) + "\n").catch(() => {});
-  // #endregion
   generateData();
   await Promise.all([
     fs.rm(config.OUTPUT_CSS_DIR, { recursive: true, force: true }),
@@ -68,10 +65,6 @@ async function buildPre() {
   await fs.mkdir(config.OUTPUT_ASSETS_DIR, { recursive: true });
   await fs.mkdir(config.IMAGE_GENERATED_DIR, { recursive: true });
   await Promise.all([minifyStyles(), minifyScripts()]);
-  // #region agent log
-  const cacheExists = await fs.access(config.IMAGE_GENERATED_DIR).then(() => true).catch(() => false);
-  await fs.appendFile("/home/thiago/Files/Projects/Clinica/site_clinica/.cursor/debug-3e885f.log", JSON.stringify({ sessionId: "3e885f", runId: "pre-fix", hypothesisId: "E", location: "build_pre.js:buildPre:done", message: "buildPre done", data: { imageCacheDirExists: cacheExists }, timestamp: Date.now() }) + "\n").catch(() => {});
-  // #endregion
 }
 
 module.exports = buildPre;

@@ -78,9 +78,6 @@ async function processHtml(replacements) {
 }
 
 async function buildPost() {
-  // #region agent log
-  await fs.appendFile("/home/thiago/Files/Projects/Clinica/site_clinica/.cursor/debug-3e885f.log", JSON.stringify({ sessionId: "3e885f", runId: "pre-fix", hypothesisId: "A", location: "build_post.js:buildPost:entry", message: "buildPost start", data: { nodeEnv: process.env.NODE_ENV }, timestamp: Date.now() }) + "\n").catch(() => {});
-  // #endregion
   const targets = (await findFiles(config.OUTPUT_ASSETS_DIR)).filter(file =>
     config.CSS_JS_EXTENSIONS.includes(path.extname(file)) &&
     !/\.[0-9a-f]{8}$/.test(path.basename(file, path.extname(file)))
@@ -88,9 +85,6 @@ async function buildPost() {
   const replacements = await fingerprintAssets(targets);
   await processHtml(replacements);
   await copyImages();
-  // #region agent log
-  await fs.appendFile("/home/thiago/Files/Projects/Clinica/site_clinica/.cursor/debug-3e885f.log", JSON.stringify({ sessionId: "3e885f", runId: "pre-fix", hypothesisId: "A", location: "build_post.js:buildPost:done", message: "buildPost done", data: { fingerprintedTargets: targets.length }, timestamp: Date.now() }) + "\n").catch(() => {});
-  // #endregion
 }
 
 module.exports = buildPost;
