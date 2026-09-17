@@ -136,13 +136,17 @@
   content: "";
 }
 
-.team-card::after {
+.team-card .img-card-grid-image::after {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(to top, transparent 60%, rgba(0, 0, 0, 0.78) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.2) 15%, transparent 38%);
   content: "";
   pointer-events: none;
+}
+
+.team-card .img-card-grid-image {
+  z-index: 0;
 }
 
 .img-card-grid-title {
