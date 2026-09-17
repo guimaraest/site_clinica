@@ -39,6 +39,7 @@ module.exports = {
   CRITTERS_OPTIONS: {
     path: path.join(ROOT_DIR, "_site"),
     publicPath: IS_PRODUCTION ? "/" : "/",
+    external: false,
     inlineFonts: false,
     preload: "swap",
     pruneSource: false
