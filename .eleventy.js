@@ -13,7 +13,7 @@ module.exports = function (eleventyConfig) {
     await buildPost();
   });
 
-  eleventyConfig.addLiquidShortcode("image", async function (source, alt, sizes = config.IMAGE_DEFAULT_SIZES, className = "") {
+  async function renderImage(source, alt, sizes, className, loading, fetchpriority) {
     const { default: Image, generateHTML } = await imageModule;
     const metadata = await Image(source, {
       widths: config.IMAGE_WIDTHS,
@@ -25,10 +25,19 @@ module.exports = function (eleventyConfig) {
     return generateHTML(metadata, {
       alt,
       sizes,
-      loading: config.IMAGE_LOADING,
+      loading,
       decoding: config.IMAGE_DECODING,
+      ...(fetchpriority ? { fetchpriority } : {}),
       class: className
     });
+  }
+
+  eleventyConfig.addLiquidShortcode("image", function (source, alt, sizes = config.IMAGE_DEFAULT_SIZES, className = "") {
+    return renderImage(source, alt, sizes, className, config.IMAGE_LOADING, "");
+  });
+
+  eleventyConfig.addLiquidShortcode("imageHigh", function (source, alt, sizes = config.IMAGE_DEFAULT_SIZES, className = "") {
+    return renderImage(source, alt, sizes, className, "eager", "high");
   });
 
   eleventyConfig.addTransform("envComment", function (content, outputPath) {
