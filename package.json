@@ -7,7 +7,7 @@
     "test": "node scripts/test.js",
     "dev": "NODE_ENV=development eleventy --serve",
     "build": "NODE_ENV=production eleventy",
-    "deploy": "npm run build && gh-pages -d _site"
+    "deploy": "npm run build && wrangler pages deploy _site --project-name=site-clinica"
   },
   "keywords": ["odontologia", "clinica"],
   "author": "",
