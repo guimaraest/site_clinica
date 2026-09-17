@@ -3,25 +3,25 @@
     "name": "Concept Belvedere"
   },
   "contact": {
-    "email": "hello@lavie.com",
-    "address": "Rua Exemplo, 123 — Bairro, Belo Horizonte/MG"
+    "email": "conceptbelvedere@gmail.com",
+    "address": "R. Des. Jorge Fontana, 476 - sala 1305 - Belvedere, Belo Horizonte - MG, 30320-670"
   },
   "social": [
     {
       "name": "WhatsApp",
       "icon": "iconoir-whatsapp",
-      "url": "https://wa.me/SEUNUMERO"
+      "url": "https://wa.me/5531983538170"
     },
     {
       "name": "Instagram",
       "icon": "iconoir-instagram",
-      "handle": "@conceptbelvedere",
-      "url": "https://instagram.com/SEU_PERFIL"
+      "handle": "@conceptbelvedere_",
+      "url": "https://www.instagram.com/conceptbelvedere_/"
     },
     {
       "name": "E-mail",
       "icon": "iconoir-mail",
-      "url": "mailto:hello@lavie.com"
+      "url": "mailto:conceptbelvedere@gmail.com"
     }
   ],
   "copyright": {
