@@ -48,6 +48,8 @@ module.exports = function (eleventyConfig) {
     });
   }
 
+  eleventyConfig.addPassthroughCopy({ "src/assets/images/schema/fachada.jpg": "assets/images/schema/fachada.jpg" });
+  
   eleventyConfig.addLiquidShortcode("image", function (source, alt, sizes = config.IMAGE_DEFAULT_SIZES, className = "") {
     return renderImage(source, alt, sizes, className, config.IMAGE_LOADING, "");
   });
