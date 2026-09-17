@@ -1,12 +1,12 @@
 # Sensitive Client Data
-
 src/_data/equipe.json
 src/_data/clinic.json
 src/assets/images/dentista-cristiana.webp
 src/assets/images/dentista-sara.jpeg
 src/assets/images/dentista-vinicius.jpeg
 
-
+# Cursor
+.cursor
 
 # Logs
 logs
