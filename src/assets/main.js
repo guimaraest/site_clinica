@@ -3,9 +3,7 @@ class HamburgerMenu extends HTMLElement {
     this.menuButton = document.querySelector('#menuButton');
     this.header = document.querySelector('#siteHeader');
     this.nav = document.querySelector('#headerNav');
-    this.panel = document.querySelector('#headerMobilePanel');
-    this.overlay = document.querySelector('#menuOverlay');
-
+    
     this.isOpen = false;
 
     this.mobileQuery = window.matchMedia('(max-width: 768px)');
@@ -13,10 +11,6 @@ class HamburgerMenu extends HTMLElement {
 
     this.menuButton.addEventListener('click', () => {
       this.toggle();
-    });
-
-    this.overlay?.addEventListener('click', () => {
-      if (this.isOpen) this.close();
     });
 
     document.addEventListener('keydown', (e) => {
@@ -36,20 +30,13 @@ class HamburgerMenu extends HTMLElement {
   }
 
   syncState() {
-    const isMobile = this.mobileQuery.matches;
-    const isHidden = isMobile && !this.isOpen;
-    const showMenu = isMobile && this.isOpen;
-
+    const isHidden = this.mobileQuery.matches && !this.isOpen;
     this.menuButton.setAttribute('aria-expanded', String(this.isOpen));
     this.menuButton.setAttribute('aria-label', this.isOpen ? 'Fechar menu' : 'Abrir menu');
-    this.panel?.setAttribute('aria-hidden', String(isHidden));
-    if (this.panel) this.panel.inert = isHidden;
-    this.header.classList.toggle('open', showMenu);
-    this.menuButton.classList.toggle('open', showMenu);
-    this.overlay?.classList.toggle('is-visible', showMenu);
-    this.overlay?.setAttribute('aria-hidden', String(!showMenu));
-    document.documentElement.style.overflow = showMenu ? 'hidden' : '';
-    document.body.classList.toggle('menu-open', showMenu);
+    this.nav.setAttribute('aria-hidden', String(isHidden));
+    this.header.classList.toggle('open', this.isOpen);
+    this.menuButton.classList.toggle('open', this.isOpen);
+    document.documentElement.style.overflow = this.isOpen ? 'hidden' : '';
   }
 
   toggle() {
