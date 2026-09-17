@@ -78,7 +78,8 @@ async function processHtml(replacements) {
 
 async function buildPost() {
   const targets = (await findFiles(config.OUTPUT_ASSETS_DIR)).filter(file =>
-    config.CSS_JS_EXTENSIONS.includes(path.extname(file))
+    config.CSS_JS_EXTENSIONS.includes(path.extname(file)) &&
+    !/\.[0-9a-f]{8}$/.test(path.basename(file, path.extname(file)))
   );
   const replacements = await fingerprintAssets(targets);
   await processHtml(replacements);
