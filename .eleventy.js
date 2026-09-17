@@ -2,7 +2,6 @@ console.log(process.env.NODE_ENV);
 const config = require("./scripts/config.js");
 const imageModule = import("@11ty/eleventy-img");
 const buildPre = require("./scripts/build_pre.js");
-const buildPost = require("./scripts/build_post.js");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/robots.txt");
@@ -11,16 +10,12 @@ module.exports = function (eleventyConfig) {
     await buildPre();
   });
 
-  eleventyConfig.on("eleventy.after", async () => {
-    await buildPost();
-  });
-
   eleventyConfig.addLiquidShortcode("image", async function (source, alt, sizes = config.IMAGE_DEFAULT_SIZES, className = "") {
     const { default: Image, generateHTML } = await imageModule;
     const metadata = await Image(source, {
       widths: config.IMAGE_WIDTHS,
       formats: config.IMAGE_FORMATS,
-      outputDir: config.IMAGE_OUTPUT_DIR,
+      outputDir: config.IMAGE_GENERATED_DIR,
       urlPath: config.IMAGE_URL_PATH,
       sharpOptions: { quality: config.WEBP_QUALITY }
     });

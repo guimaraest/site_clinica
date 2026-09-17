@@ -13,6 +13,7 @@ module.exports = {
   SOURCE_JS_FILE: path.join(ROOT_DIR, "src", "assets", "main.js"),
   OUTPUT_CSS_DIR: path.join(ROOT_DIR, "_site", "assets", "css"),
   OUTPUT_IMAGE_DIR: path.join(ROOT_DIR, "_site", "assets", "images"),
+  IMAGE_GENERATED_DIR: path.join(ROOT_DIR, ".cache", "images"),
   OUTPUT_JS_FILE: path.join(ROOT_DIR, "_site", "assets", "main.js"),
   TEST_LOG_FILE: path.join(ROOT_DIR, "test.log"),
   ASSET_URL_PATH: "/assets/",

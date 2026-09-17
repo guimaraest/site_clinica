@@ -26,11 +26,11 @@
 }
 
 .professional-fact-heading i,
-.professional-lattes-link i {
+.professional-social-link i {
   color: var(--primary-muted);
 }
 
-.professional-lattes-link {
+.professional-social-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;

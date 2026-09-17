@@ -57,8 +57,13 @@ async function minifyScripts() {
 
 async function buildPre() {
   generateData();
-  await fs.rm(config.OUTPUT_SITE_DIR, { recursive: true, force: true });
+  await Promise.all([
+    fs.rm(config.OUTPUT_CSS_DIR, { recursive: true, force: true }),
+    fs.rm(config.OUTPUT_JS_FILE, { force: true }),
+    fs.rm(config.IMAGE_GENERATED_DIR, { recursive: true, force: true })
+  ]);
   await fs.mkdir(config.OUTPUT_ASSETS_DIR, { recursive: true });
+  await fs.mkdir(config.IMAGE_GENERATED_DIR, { recursive: true });
   await Promise.all([minifyStyles(), minifyScripts()]);
 }
 
