@@ -7,8 +7,6 @@
   <title>{% if title %}{{ title }} · {{ clinic.name }}{% else %}{{ clinic.name }}{% endif %}</title>
   <meta name="description" content="{{ description | default: clinic.description }}">
 
-  <link rel="stylesheet" href="{{ 'https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css' | url }}" />
-
   <script src="{{ '/assets/main.js' | url }}" defer></script>
   <link rel="stylesheet" href="{{ '/assets/css/global.css' | url }}">
   {% if stylesheet %}<link rel="stylesheet" href="{{ '/assets' | url }}{{ stylesheet }}">{% endif %}
@@ -30,6 +28,6 @@
   </main>
 
   {% include "footer.liquid" %}
-
+  <link rel="stylesheet" href="{{ 'https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css' | url }}" />
 </body>
 </html>
