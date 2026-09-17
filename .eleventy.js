@@ -3,17 +3,33 @@ const config = require("./scripts/config.js");
 const imageModule = import("@11ty/eleventy-img");
 const buildPre = require("./scripts/build_pre.js");
 const buildPost = require("./scripts/build_post.js");
+const IS_DEVELOPMENT = process.env.NODE_ENV === "development";
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.on("eleventy.before", async () => {
-    await buildPre();
-  });
+  eleventyConfig.addGlobalData("development", IS_DEVELOPMENT);
 
-  eleventyConfig.on("eleventy.after", async () => {
-    await buildPost();
-  });
+  if (IS_DEVELOPMENT) {
+    eleventyConfig.addPassthroughCopy({ "src/assets/css": "assets/css" });
+    eleventyConfig.addPassthroughCopy({ "src/assets/images": "assets/images" });
+    eleventyConfig.addPassthroughCopy({ "src/assets/main.js": "assets/main.js" });
+  } else {
+    eleventyConfig.on("eleventy.before", async () => {
+      await buildPre();
+    });
+
+    eleventyConfig.on("eleventy.after", async () => {
+      await buildPost();
+    });
+  }
 
   async function renderImage(source, alt, sizes, className, loading, fetchpriority) {
+    if (IS_DEVELOPMENT) {
+      const imageUrl = encodeURI(source.replace(/^src\/assets\//, "/assets/"));
+      const priority = fetchpriority ? ` fetchpriority="${fetchpriority}"` : "";
+      const classAttribute = className ? ` class="${className}"` : "";
+      return `<img src="${imageUrl}" alt="${alt}" sizes="${sizes}" loading="${loading}" decoding="${config.IMAGE_DECODING}"${priority}${classAttribute}>`;
+    }
+
     const { default: Image, generateHTML } = await imageModule;
     const metadata = await Image(source, {
       widths: config.IMAGE_WIDTHS,
