@@ -6,7 +6,11 @@ if (menuButton && header && nav) {
   const mobileQuery = window.matchMedia('(max-width: 768px)');
 
   function syncState(isOpen) {
-    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute(
+      'aria-expanded',
+      String(isOpen)
+    );
+
     menuButton.setAttribute(
       'aria-label',
       isOpen ? 'Fechar menu' : 'Abrir menu'
