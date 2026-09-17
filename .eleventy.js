@@ -1,8 +1,8 @@
 console.log(process.env.NODE_ENV);
-const config = require("./config.js");
+const config = require("./scripts/config.js");
 const imageModule = import("@11ty/eleventy-img");
-const buildPre = require("./build_pre.js");
-const buildPost = require("./build_post.js");
+const buildPre = require("./scripts/build_pre.js");
+const buildPost = require("./scripts/build_post.js");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/robots.txt");

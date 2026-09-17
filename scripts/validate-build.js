@@ -1,7 +1,8 @@
 const fs = require("fs");
 const path = require("path");
+const config = require("./config.js");
 
-const outputDir = path.join(__dirname, "..", "_site");
+const outputDir = config.OUTPUT_SITE_DIR;
 const issues = [];
 
 function filesIn(directory) {

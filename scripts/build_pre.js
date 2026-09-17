@@ -2,7 +2,7 @@ const fs = require("fs/promises");
 const path = require("path");
 const esbuild = require("esbuild");
 const config = require("./config.js");
-const generateData = require("./tools/generate-data.js");
+const generateData = require("./generate-data.js");
 
 async function filesIn(directory) {
   const entries = await fs.readdir(directory, { withFileTypes: true });

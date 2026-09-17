@@ -1,7 +1,8 @@
 const fs = require("fs");
 const path = require("path");
+const config = require("./config.js");
 
-const root = path.resolve(__dirname, "..");
+const root = config.ROOT_DIR;
 const sourceDir = path.join(root, "src");
 const dataDir = path.join(sourceDir, "_data");
 const clinic = JSON.parse(fs.readFileSync(path.join(dataDir, "clinic.json"), "utf8"));

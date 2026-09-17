@@ -1,6 +1,6 @@
 const path = require("path");
 
-const ROOT_DIR = __dirname;
+const ROOT_DIR = path.resolve(__dirname, "..");
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
 module.exports = {
@@ -14,6 +14,7 @@ module.exports = {
   OUTPUT_CSS_DIR: path.join(ROOT_DIR, "_site", "assets", "css"),
   OUTPUT_IMAGE_DIR: path.join(ROOT_DIR, "_site", "assets", "images"),
   OUTPUT_JS_FILE: path.join(ROOT_DIR, "_site", "assets", "main.js"),
+  TEST_LOG_FILE: path.join(ROOT_DIR, "test.log"),
   ASSET_URL_PATH: "/assets/",
   GLOBAL_CSS_FILES: ["base.css", "components.css", "header.css", "footer.css"],
   GLOBAL_CSS_FILE: "global.css",
