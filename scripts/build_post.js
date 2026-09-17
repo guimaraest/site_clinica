@@ -5,6 +5,7 @@ const Critters = require("critters");
 const { minify } = require("html-minifier-terser");
 const config = require("./config.js");
 const copyImages = require("./copy-images.js");
+const generateRobots = require("./generate-robots.js");
 
 async function htmlFiles() {
   const entries = await fs.readdir(config.OUTPUT_SITE_DIR, { withFileTypes: true });
@@ -85,6 +86,7 @@ async function buildPost() {
   const replacements = await fingerprintAssets(targets);
   await processHtml(replacements);
   await copyImages();
+  await generateRobots();
 }
 
 module.exports = buildPost;

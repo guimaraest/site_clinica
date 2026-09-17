@@ -5,8 +5,6 @@ const buildPre = require("./scripts/build_pre.js");
 const buildPost = require("./scripts/build_post.js");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("src/robots.txt");
-
   eleventyConfig.on("eleventy.before", async () => {
     await buildPre();
   });
