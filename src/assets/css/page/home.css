@@ -43,6 +43,7 @@
 .team-card-role { color: var(--bg-light); font-size: var(--text-14); text-align: left; }
 .team-card-meta { display: flex; align-items: center; justify-content: space-between; gap: var(--space-12); color: var(--text-muted); font-size: var(--text-14); }
 .team-card-meta .text-link { font-size: var(--text-14); }
+#localizacao > div > div > div:nth-child(2) > h2 { align-items: center; gap: var(--space-4); display: flex; }
 .location-preview { background: var(--bg-light); }
 .location-preview .section-content { align-items: center; }
 .location-preview .column:first-child { max-width: 500px; }

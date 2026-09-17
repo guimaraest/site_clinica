@@ -75,14 +75,16 @@ stylesheet: /css/page/home.css
 <section class="section location-preview" id="localizacao">
 	<div class="section-container">
 		<div class="section-content">
+      <div class="column">
+        <div class="map-embed">
+          <iframe title="Localização da clínica no mapa" src="{{ clinic.location.mapEmbed }}" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+        <a href="{{ clinic.location.mapsUrl | url }}" target="_blank" rel="noopener noreferrer" class="btn">Abrir no Google Maps</a>
+      </div>
 			<div class="column">
 				<h2><i class="iconoir-map-pin" aria-hidden="true"></i>Onde estamos</h2>
         <p>{{ clinic.location.address }}</p>
         <p>{{ clinic.location.hours }}</p>
-				<div class="map-embed">
-                <iframe title="Localização da clínica no mapa" src="{{ clinic.location.mapEmbed }}" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-				</div>
-        <a href="{{ clinic.location.mapsUrl | url }}" target="_blank" rel="noopener noreferrer" class="btn">Como chegar</a>
 			</div>
 		</div>
 	</div>
@@ -94,7 +96,6 @@ stylesheet: /css/page/home.css
 			<div class="column">
 				<span class="kicker">Seu próximo passo</span><h2>Agende sua consulta</h2><p class="subheading">Conte o que você precisa. Nós ajudamos a encontrar o melhor caminho.</p>
 				{% include "cta/whatsapp-primary.liquid" %}
-				{% include "cta/whatsapp-link.liquid" %}
 			</div>
 		</div>
 	</div>
