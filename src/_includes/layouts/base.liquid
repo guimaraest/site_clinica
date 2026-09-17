@@ -7,6 +7,44 @@
   <title>{% if title %}{{ title }} · {{ clinic.name }}{% else %}{{ clinic.name }}{% endif %}</title>
   <meta name="description" content="{{ description | default: clinic.description }}">
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": {{ schema.type | jsonify }},
+    "name": {{ clinic.name | jsonify }},
+    "description": {{ clinic.description | jsonify }},
+    "url": {{ clinic.url | jsonify }},
+    "telephone": {{ clinic.contact.phone | jsonify }},
+    "email": {{ clinic.contact.email | jsonify }},
+    "priceRange": {{ schema.priceRange | jsonify }},
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": {{ clinic.location.address | jsonify }},
+      "addressLocality": "Belo Horizonte",
+      "addressRegion": "MG",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": {{ schema.geo.latitude }},
+      "longitude": {{ schema.geo.longitude }}
+    },
+    "openingHoursSpecification": [
+      {% for spec in schema.openingHours %}
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": {{ spec.days | jsonify }},
+        "opens": {{ spec.opens | jsonify }},
+        "closes": {{ spec.closes | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ],
+    "sameAs": [
+      {{ clinic.social.instagram.url | jsonify }}
+    ]
+  }
+  </script>
+
   <script src="{{ '/assets/main.js' | url }}" defer></script>
   {% if development %}
     <link rel="stylesheet" href="{{ '/assets/css/base.css' | url }}">
