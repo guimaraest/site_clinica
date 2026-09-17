@@ -27,6 +27,11 @@
   gap: var(--space-4);
 }
 
+.brand-mark,
+.btn-nav {
+  text-shadow: var(--text-shadow-md);
+}
+
 @media (hover: hover) and (pointer: fine) {
   .btn:hover,
   .btn:focus-visible,

@@ -42,8 +42,8 @@ class HamburgerMenu extends HTMLElement {
 
     this.menuButton.setAttribute('aria-expanded', String(this.isOpen));
     this.menuButton.setAttribute('aria-label', this.isOpen ? 'Fechar menu' : 'Abrir menu');
-    this.nav.setAttribute('aria-hidden', String(isHidden));
     this.panel?.setAttribute('aria-hidden', String(isHidden));
+    if (this.panel) this.panel.inert = isHidden;
     this.header.classList.toggle('open', showMenu);
     this.menuButton.classList.toggle('open', showMenu);
     this.overlay?.classList.toggle('is-visible', showMenu);
