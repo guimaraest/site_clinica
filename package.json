@@ -4,6 +4,7 @@
   "description": "Website da clínica odontológica Concept Belvedere",
   "main": "index.js",
   "scripts": {
+    "serve": "npx serve _site",
     "test": "node scripts/test.js",
     "dev": "NODE_ENV=development eleventy --serve",
     "build": "NODE_ENV=production eleventy",
