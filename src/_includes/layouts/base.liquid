@@ -4,8 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if title %}{{ title }} · {{ clinic.name }}{% else %}{{ clinic.name }}{% endif %}</title>
-  <meta name="description" content="{{ description | default: clinic.description }}">
+  {% assign pageMeta = meta[page.url] %}
+  {% assign pageTitle = pageMeta.title | default: title %}
+  {% assign pageDescription = description | default: pageMeta.description | default: clinic.description %}
+
+  <title>{% if pageTitle %}{{ pageTitle }} · {{ clinic.name }}{% else %}{{ clinic.name }}{% endif %}</title>
+  <meta name="description" content="{{ pageDescription }}">
+  <link rel="canonical" href="{{ clinic.url }}{{ page.url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{% if pageTitle %}{{ pageTitle }} · {{ clinic.name }}{% else %}{{ clinic.name }}{% endif %}">
+  <meta property="og:description" content="{{ pageDescription }}">
+  <meta property="og:url" content="{{ clinic.url }}{{ page.url }}">
+  <meta property="og:site_name" content="{{ clinic.name }}">
+  <meta property="og:image" content="{{ clinic.url }}{{ pageMeta.image | default: '/assets/images/schema/fachada.jpg' }}">
 
   <script type="application/ld+json">
   {

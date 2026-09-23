@@ -1,0 +1,54 @@
+{
+  "/": {
+    "title": "Clínica Odontológica no Belvedere",
+    "description": "Atendimento odontológico completo no Belvedere, Belo Horizonte. Implantes, ortodontia, clareamento e estética para cuidar do seu sorriso."
+  },
+  "/localizacao/": {
+    "title": "Localização no Belvedere",
+    "description": "Consultório odontológico no bairro Belvedere em Belo Horizonte, ao lado do BH Shopping. Fácil acesso e atendimento com hora marcada."
+  },
+  "/servicos/": {
+    "title": "Tratamentos e Serviços Odontológicos",
+    "description": "Conheça nossos tratamentos: restauração, implante, prótese, ortodontia, clareamento dental e harmonização orofacial em Belo Horizonte."
+  },
+  "/servicos/restauracao/": {
+    "title": "Restauração Dentária e Dor de Dente",
+    "description": "Tratamento para dor de dente, sensibilidade, cáries e dentes quebrados. Recupere o conforto e a função com restaurações dentárias modernas."
+  },
+  "/servicos/clareamento/": {
+    "title": "Clareamento Dental",
+    "description": "Recupere o brilho e a tonalidade natural do seu sorriso com procedimentos seguros de clareamento dental supervisionados no Belvedere."
+  },
+  "/servicos/implante/": {
+    "title": "Implantodontia e Implantes Dentários",
+    "description": "Recupere a mastigação e a segurança para sorrir com implantes dentários modernos. Planejamento cuidadoso e personalizado para o seu caso."
+  },
+  "/servicos/protese/": {
+    "title": "Prótese Dentária",
+    "description": "Substituição de dentes perdidos com próteses dentárias funcionais, confortáveis e com aspecto natural no Belvedere."
+  },
+  "/servicos/aparelho/": {
+    "title": "Ortodontia e Aparelhos Dentários",
+    "description": "Correção do alinhamento dos dentes e da mordida com aparelhos ortodônticos modernos para adultos e adolescentes."
+  },
+  "/servicos/estetica/": {
+    "title": "Harmonização Orofacial",
+    "description": "Procedimentos de harmonização orofacial (HOF) para valorizar os traços do seu rosto com equilíbrio, naturalidade e segurança."
+  },
+  "/equipe/": {
+    "title": "Nossa Equipe de Dentistas",
+    "description": "Conheça a equipe de especialistas da Concept Belvedere: profissionais experientes dedicados ao cuidado completo da sua saúde bucal."
+  },
+  "/equipe/dra-cristiana/": {
+    "title": "Dra. Cristiana Guimarães · Odontopediatria",
+    "description": "Dra. Cristiana Guimarães: mais de 20 anos de experiência em odontopediatria, cuidando com carinho e dedicação do sorriso dos pequenos."
+  },
+  "/equipe/dr-vinicius/": {
+    "title": "Dr. Vinicius Xavier · Ortodontia",
+    "description": "Dr. Vinicius Xavier: especialista em ortodontia e alinhamento do sorriso na clínica Concept Belvedere, em Belo Horizonte."
+  },
+  "/equipe/dra-sara/": {
+    "title": "Dra. Sara Carvalho · Dentística e Estética",
+    "description": "Dra. Sara Carvalho: especialista em dentística, reabilitação oral e estética dental e facial no Belvedere."
+  }
+}
