@@ -1,0 +1,27 @@
+---
+pagename: "404"
+layout: layouts/base.liquid
+title: Página não encontrada
+description: A página que você procura não foi encontrada ou foi movida.
+stylesheet: /css/page/404.css
+permalink: 404.html
+eleventyExcludeFromCollections: true
+---
+
+<section class="section not-found-section">
+	<div class="section-container">
+		<div class="section-content">
+			<div class="column center not-found-content">
+				<div class="not-found-code" aria-hidden="true">404</div>
+				<div class="not-found-text">
+					<h1>Página não encontrada</h1>
+					<p class="subheading">O link que você acessou pode estar desatualizado ou o endereço foi digitado incorretamente.</p>
+				</div>
+				<div class="not-found-actions">
+					<a href="{{ '/' | url }}" class="btn"><span>Voltar ao início</span></a>
+					{% include "cta/whatsapp-primary.liquid" %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
