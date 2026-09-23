@@ -22,7 +22,7 @@ module.exports = {
   CSS_EXTENSION: ".css",
   JS_EXTENSION: ".js",
   CSS_JS_EXTENSIONS: [".css", ".js"],
-  IMAGE_WIDTHS: [320, 520, 640, 960, 1280, 1600],
+  IMAGE_WIDTHS: [120, 320, 520, 640, 960, 1280, 1600],
   IMAGE_FORMATS: ["webp"],
   WEBP_QUALITY: 90,
   IMAGE_URL_PATH: IS_PRODUCTION ? "/assets/images/" : "/assets/images/",
