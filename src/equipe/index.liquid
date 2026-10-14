@@ -5,24 +5,12 @@ title: Equipe | Clínica Odontológica
 stylesheet: /css/page/equipe.css
 ---
 
-<section class="section page-hero" id="hero">
-	<div class="section-container">
-		<div class="section-content">
-			<div class="column">
-				<div class="hero-text">
-					<h1>Quem cuida do seu sorriso</h1>
-					<p class="subheading">Profissionais experientes e sempre atualizados.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
 <section class="section integration-section" id="lista-equipe">
   <div class="section-container">
     <div class="section-content">
       <div class="column integration-column">
-        <h2 class="center">Nossos profissionais</h2>
+        <h1 class="center">Nossa equipe</h1>
+        <p class="subheading center">Um time cuidadoso, atento às diferentes necessidades de cada paciente.</p>
         <div class="team-list">
           {% for profissional in equipe %}
           <article class="team-entry">
@@ -30,10 +18,23 @@ stylesheet: /css/page/equipe.css
               <div class="img-card-grid-image">{% image profissional.image, profissional.alt, "(max-width: 700px) 50vw, 25vw" %}</div>
               <div class="team-card-content"><div class="team-card-name">{{ profissional.name }}</div><span class="team-card-role">{{ profissional.specialization }}</span></div>
             </a>
-            <div class="team-card-meta"><span>{{ profissional.experience }}</span><a href="{{ profissional.slug | prepend: '/equipe/' | append: '/' | url }}" class="text-link">Ver perfil <i class="iconoir-arrow-right"></i></a></div>
+            <div class="team-card-meta"><a href="{{ profissional.slug | prepend: '/equipe/' | append: '/' | url }}" class="text-link">Ver perfil <i class="iconoir-arrow-right"></i></a></div>
           </article>
           {% endfor %}
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section team-principles" id="abordagem">
+  <div class="section-container">
+    <div class="section-content">
+      <div class="column">
+        <span class="kicker">Como trabalhamos</span>
+        <h2>Uma equipe pensada para diferentes necessidades</h2>
+        <p class="paragraph">A clínica busca reunir profissionais com diferentes formações e formas de cuidado para atender crianças, adultos e pessoas com demandas específicas com atenção e clareza. O objetivo é manter uma consulta organizada, respeitosa e orientada para a real necessidade de cada paciente.</p>
+        <p class="paragraph">Esse cuidado inclui escuta, explicação sobre as opções e acompanhamento ao longo do tratamento, com foco em conforto, prevenção e decisões que fazem sentido para cada caso.</p>
       </div>
     </div>
   </div>

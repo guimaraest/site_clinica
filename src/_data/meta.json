@@ -1,15 +1,15 @@
 {
   "/": {
     "title": "Clínica Odontológica no Belvedere",
-    "description": "Atendimento odontológico completo no Belvedere, Belo Horizonte. Implantes, ortodontia, clareamento e estética para cuidar do seu sorriso."
+    "description": "Atendimento odontológico completo no Belvedere, Belo Horizonte. Implantes, ortodontia, clareamento, odontopediatria e estética para cuidar do seu sorriso."
   },
   "/localizacao/": {
-    "title": "Localização no Belvedere",
-    "description": "Consultório odontológico no bairro Belvedere em Belo Horizonte, ao lado do BH Shopping. Fácil acesso e atendimento com hora marcada."
+    "title": "Localização e ambiente da clínica",
+    "description": "Consultório odontológico no bairro Belvedere em Belo Horizonte, com atendimento em um ambiente acolhedor e fácil acesso."
   },
   "/servicos/": {
     "title": "Tratamentos e Serviços Odontológicos",
-    "description": "Conheça nossos tratamentos: restauração, implante, prótese, ortodontia, clareamento dental e harmonização orofacial em Belo Horizonte."
+    "description": "Conheça nossos tratamentos: restauração dentária, implante, prótese, ortodontia, clareamento, odontopediatria e estética dental em Belo Horizonte."
   },
   "/servicos/restauracao/": {
     "title": "Restauração Dentária e Dor de Dente",
@@ -32,16 +32,20 @@
     "description": "Correção do alinhamento dos dentes e da mordida com aparelhos ortodônticos modernos para adultos e adolescentes."
   },
   "/servicos/estetica/": {
-    "title": "Harmonização Orofacial",
-    "description": "Procedimentos de harmonização orofacial (HOF) para valorizar os traços do seu rosto com equilíbrio, naturalidade e segurança."
+    "title": "Estética Dental e Harmonização Orofacial",
+    "description": "Procedimentos de estética dental e harmonização orofacial para melhorar o sorriso e o equilíbrio do rosto com planejamento individual."
+  },
+  "/servicos/odontopediatria/": {
+    "title": "Odontopediatria",
+    "description": "Atendimento odontopediátrico com acolhimento, orientação para pais e cuidado adequado à idade e ao momento da criança."
   },
   "/equipe/": {
     "title": "Nossa Equipe de Dentistas",
-    "description": "Conheça a equipe de especialistas da Concept Belvedere: profissionais experientes dedicados ao cuidado completo da sua saúde bucal."
+    "description": "Conheça a equipe da Concept Belvedere e a forma como o cuidado é pensado para atender diferentes necessidades e perfis de pacientes."
   },
   "/equipe/dra-cristiana/": {
     "title": "Dra. Cristiana Guimarães · Odontopediatria",
-    "description": "Dra. Cristiana Guimarães: mais de 20 anos de experiência em odontopediatria, cuidando com carinho e dedicação do sorriso dos pequenos."
+    "description": "Dra. Cristiana Guimarães: 15 anos como dentista generalista e 1 ano em odontopediatria, com atenção e acolhimento para crianças e famílias."
   },
   "/equipe/dr-vinicius/": {
     "title": "Dr. Vinicius Xavier · Ortodontia",

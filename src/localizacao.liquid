@@ -5,13 +5,29 @@ title: Localização | Clínica Odontológica
 stylesheet: /css/page/localizacao.css
 ---
 
-<section class="section page-hero location-hero">
+<section class="section location-intro" id="ambiente">
 	<div class="section-container">
 		<div class="section-content">
-			<div class="column">
-				<div>
-					<h1>Seu dentista no Belvedere</h1>
-					<p class="subheading">Fácil acesso, próximo ao BH shopping</p>
+			<div class="column location-photo-column">
+				{% imageHigh "src/assets/images/clinic_working_space_good_photo_light.jpeg", "Consultório odontológico com ambiente acolhedor", "100vw", "page-image" %}
+			</div>
+			<div class="column location-copy">
+				<span class="kicker">Consultório no Belvedere</span>
+				<h1>Atendimento com acesso prático e ambiente tranquilo</h1>
+				<p class="paragraph">A clínica Concept Belvedere está no bairro Belvedere, em Belo Horizonte, com atendimento pensado para facilitar a sua rotina. O espaço busca ser acolhedor e funcional, com horários que favorecem consultas durante a semana e em sábado.</p>
+				<div class="location-details">
+					<div>
+						<p class="location-label">Endereço</p>
+						<p>{{ clinic.location.address }}</p>
+					</div>
+					<div>
+						<p class="location-label">Horários</p>
+						<p>{{ clinic.location.hours }}</p>
+					</div>
+				</div>
+				<div class="location-actions">
+					<a href="{{ clinic.location.mapsUrl }}" target="_blank" rel="noopener noreferrer" class="btn">Abrir no Google Maps</a>
+					<a href="{{ clinic.contact.whatsapp }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Agendar conversa</a>
 				</div>
 			</div>
 		</div>
@@ -22,13 +38,11 @@ stylesheet: /css/page/localizacao.css
 	<div class="section-container">
 		<div class="section-content">
 			<div class="column">
-				<span class="kicker">Visite-nos</span><h2>Chegar até nós é simples</h2>
-				<p class="location-label">Endereço</p><p>{{ clinic.location.address }}</p>
-				<p class="location-label">Horários</p><p>{{ clinic.location.hours }}</p>
+				<span class="kicker">Como chegar</span>
+				<h2>Localização fácil e prática</h2>
 				<div class="map-embed">
 					<iframe title="Localização da clínica no mapa" src="{{ clinic.location.mapEmbed }}" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
-				<a href="{{ clinic.location.mapsUrl | url }}" target="_blank" rel="noopener noreferrer" class="btn">Como chegar</a>
 			</div>
 		</div>
 	</div>
