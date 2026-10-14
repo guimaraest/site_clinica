@@ -1,0 +1,53 @@
+---
+pagename: outros-servicos
+layout: layouts/base.liquid
+title: Outros tratamentos odontológicos | Clínica Odontológica
+stylesheet: /css/page/servicos.css
+---
+
+<section class="section hero-section" id="introducao">
+  <div class="section-container">
+    <div class="section-content">
+      <div class="column">
+        <span class="kicker">Outros tratamentos</span>
+        <h1>Oferecemos muitos outros serviços!</h1>
+        <p class="paragraph">Nossa equipe multidisciplinar possui especialistas para tratar condições específicas, como:</p>
+      </div>
+      <div class="column">
+        {% imageHigh "src/assets/images/smile_black_woman.jpg", "Mulher sorrindo", "100vw", "page-image" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="lista-de-tratamentos">
+  <div class="section-container">
+    <div class="section-content">
+      <div class="column">
+        <h2>Assuntos que você pode consultar com a clínica</h2>
+        <div class="card-grid">
+          <div class="card card-hover info-card"><span>Facetas</span></div>
+          <div class="card card-hover info-card"><span>Bruxismo (ranger de dentes)</span></div>
+          <div class="card card-hover info-card"><span>Tratamento de canal</span></div>
+          <div class="card card-hover info-card"><span>Urgência odontológica</span></div>
+          <div class="card card-hover info-card"><span>Extração</span></div>
+          <div class="card card-hover info-card"><span>Cirurgia</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section appointment-section" id="contato">
+  <div class="section-container">
+    <div class="section-content">
+      <div class="column center">
+        <h2 class="center">Converse com a clínica pelo WhatsApp</h2>
+        <p class="paragraph center">Mande uma mensagem pelo WhatsApp para saber mais sobre esses serviços.</p>
+        <a href="{{ clinic.contact.whatsapp }}" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          <i class="iconoir-whatsapp" aria-hidden="true"></i>Falar pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

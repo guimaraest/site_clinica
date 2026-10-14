@@ -39,6 +39,10 @@
     "title": "Odontopediatria",
     "description": "Atendimento odontopediátrico com acolhimento, orientação para pais e cuidado adequado à idade e ao momento da criança."
   },
+  "/servicos/outros/": {
+    "title": "Outros tratamentos odontológicos",
+    "description": "Consulte a clínica sobre facetas, bruxismo, tratamento de canal, urgências odontológicas, extrações e cirurgias."
+  },
   "/equipe/": {
     "title": "Nossa Equipe de Dentistas",
     "description": "Conheça a equipe da Concept Belvedere e a forma como o cuidado é pensado para atender diferentes necessidades e perfis de pacientes."
