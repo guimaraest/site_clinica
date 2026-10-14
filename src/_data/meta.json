@@ -9,7 +9,7 @@
   },
   "/servicos/": {
     "title": "Tratamentos e Serviços Odontológicos",
-    "description": "Conheça nossos tratamentos: restauração dentária, implante, prótese, ortodontia, clareamento, odontopediatria e estética dental em Belo Horizonte."
+    "description": "Conheça nossos tratamentos: restauração dentária, implante, prótese, ortodontia, clareamento, odontopediatria e estética facial e dental em Belo Horizonte."
   },
   "/servicos/restauracao/": {
     "title": "Restauração Dentária e Dor de Dente",
@@ -32,8 +32,8 @@
     "description": "Correção do alinhamento dos dentes e da mordida com aparelhos ortodônticos modernos para adultos e adolescentes."
   },
   "/servicos/estetica/": {
-    "title": "Estética Dental e Harmonização Orofacial",
-    "description": "Procedimentos de estética dental e harmonização orofacial para melhorar o sorriso e o equilíbrio do rosto com planejamento individual."
+    "title": "Estética Facial e Dental",
+    "description": "Conheça as opções de estética facial e dental da clínica e converse com a equipe sobre avaliação e indicação para o seu caso."
   },
   "/servicos/odontopediatria/": {
     "title": "Odontopediatria",

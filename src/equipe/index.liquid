@@ -18,7 +18,7 @@ stylesheet: /css/page/equipe.css
               <div class="img-card-grid-image">{% image profissional.image, profissional.alt, "(max-width: 700px) 50vw, 25vw" %}</div>
               <div class="team-card-content"><div class="team-card-name">{{ profissional.name }}</div><span class="team-card-role">{{ profissional.specialization }}</span></div>
             </a>
-            <div class="team-card-meta"><a href="{{ profissional.slug | prepend: '/equipe/' | append: '/' | url }}" class="text-link">Ver perfil <i class="iconoir-arrow-right"></i></a></div>
+            <div class="team-card-meta">{% if features.showTeamExperience %}<span>{{ profissional.experience }}</span>{% endif %}<a href="{{ profissional.slug | prepend: '/equipe/' | append: '/' | url }}" class="text-link">Ver perfil <i class="iconoir-arrow-right"></i></a></div>
           </article>
           {% endfor %}
         </div>

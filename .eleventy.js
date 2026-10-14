@@ -7,6 +7,7 @@ const IS_DEVELOPMENT = process.env.NODE_ENV === "development";
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData("development", IS_DEVELOPMENT);
+  eleventyConfig.addGlobalData("features", config.FEATURE_FLAGS);
 
   if (IS_DEVELOPMENT) {
     eleventyConfig.addPassthroughCopy({ "src/assets/css": "assets/css" });

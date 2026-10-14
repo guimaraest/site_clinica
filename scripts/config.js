@@ -5,6 +5,9 @@ const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
 module.exports = {
   ROOT_DIR,
+  FEATURE_FLAGS: {
+    showTeamExperience: false
+  },
   SOURCE_ASSETS_DIR: path.join(ROOT_DIR, "src", "assets"),
   OUTPUT_SITE_DIR: path.join(ROOT_DIR, "_site"),
   OUTPUT_ASSETS_DIR: path.join(ROOT_DIR, "_site", "assets"),
